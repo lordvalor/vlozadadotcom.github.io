@@ -1,0 +1,21 @@
+---
+layout: post
+title: Instalando Nvdia 9400 GT en debian wheeze/testing
+date: '2012-07-06T06:46:00.001-04:30'
+author: LordValor
+tags:
+- Debian
+- Linux
+- wheeze
+- '9400'
+- xorg
+- Gallery
+- Video
+- Nvidia
+- Gforce
+modified_time: '2013-01-22T01:18:21.633-04:30'
+blogger_id: tag:blogger.com,1999:blog-8748829241811617486.post-791270083015648974
+blogger_orig_url: http://blog.lordvalor.com.ve/2012/07/instalando-nvdia-9400-gt-en-debian_6.html
+---
+
+<b></b><br /><h3><b>Kernel 3.2.0-2-686-pae</b></h3><br /><br /><b>Este procedimiento es compatible con las tarjetas</b><br /><br /><h3>GeForce 9M series:</h3><br />9800M GTX, 9800M GTS, 9800M GT, 9800M GS, 9700M GTS, 9700M GT, 9650M GT, 9650M GS, 9600M GT, 9600M GS, 9500M GS, 9500M G, 9400M G, 9400M, 9300M GS, 9300M G, 9200M GS, 9100M G<br /><br />Si no estas seguro del modelo de tu tarjeta puedes verificar de la siguiente forma<br /><br /><a name='more'></a><br /><br /><code><br /># lspci | grep VGA</code><br /><br />y devuelve algo como<br /><br /><code><br />04:00.0 VGA compatible controller: NVIDIA Corporation G96 [GeForce 9400 GT] (rev a1)</code><br /><br />Actualmente logre hacer el el cambio exitoso a debian wheeze y to va funcionado excelente excepto por el driver de la tarjeta de video, no es que no esté funcionando si no que&nbsp; no se obtiene el rendimiento adecuado y es por el soporte genérico del driver “nouveau” integrado en el kernel.<br /><br />Ahora para hacer funcionar la tarjeta de video vamos hacer lo siguiente...!<br /><br />Primero verificamos que&nbsp; tenemos instaladas linux-header y linux-imagen de acuerdo la versión de nuestro kernel en mi caso 3.2.0-2-686-pae<br /><br /><code># aptitude search linux-image</code><br /><br />mostrara el&nbsp; siguiente resultado:<br /><br /><code><br />i A linux-image-3.2.0-2-686-pae&nbsp;&nbsp;&nbsp;&nbsp; - Linux 3.2 for modern Pc</code><br /><br />si al principio muestra una “i” es porque el paquete ya se encuentra instalado si muestra una “p” es por que no esta instalado pero esta disponible para ser instalado.<br /><br />si tu caso te muestra una “p” entonces procedemos a&nbsp; instalar de la siguiente forma:<br /><br /><code># aptitude install linux-image-3.2.0-2-686-pae</code><br /><br />y utilizamos el mismo procedimiento para linux-headers-3.2.0-2-686-pae<br /><br />luego de instalar verificamos si el driver&nbsp; nouveau esta cargado de la siguiente forma<br /><br /><code># lsmod</code><br />una manera mas exacta seria con<br /><br /><code>lsmod | grap&nbsp; nouveau </code><br /><br />y lo agregamos a la lista negra para que no se cargue al inicial el sistema.<br /><br />Con el editor de texto de tu preferencia abrimos el archivo fbdev-blacklist.conf de la siguiente manera<br /><br /><code># vim.tiny /etc/modprobe.d/fbdev-blacklist.conf</code><br /><br />agregamos al final de la linea “blacklist nouveau”&nbsp; (sin las comillas)&nbsp; y guardamos los cambios.<br /><br /><b> luego instalamos:</b><br /><br /><code># aptitude install nvidia-glx nvidia-settings nvidia-xconfig &amp;amp;&amp;amp; nvidia-xconfig</code><br /><br />luego de instalar seguramente te dirá que el driver nouveau aun se encuentra cargado y que debe reiniciar...! luego de esto ya podremos tener nuestra tarjeta de video funcionando correctamente.<br /><br /><a href="http://blog.lordvalor.com.ve/wp-content/uploads/2012/07/nvidia.png"><img alt="" class="alignnone size-medium wp-image-47" height="165" src="http://blog.lordvalor.com.ve/wp-content/uploads/2012/07/nvidia-300x165.png" title="nvidia-9400" width="300" /></a><br /><br />Espero que les pueda servir de ayuda...!
