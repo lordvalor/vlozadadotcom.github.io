@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lordvalor</title>
+    <description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</description>
+    <link>http://www.Lordvalor.com.ve/</link>
+    <atom:link href="http://www.Lordvalor.com.ve/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 21 Jan 2016 23:13:05 +0000</pubDate>
+    <lastBuildDate>Thu, 21 Jan 2016 23:13:05 +0000</lastBuildDate>
+    <generator>Jekyll v3.0.2</generator>
+    
+      <item>
+        <title>Nos mudamos. A lordvalor.com.ve </title>
+        <description> Nos mudamos a dominio propio. Por razones que ya todos conocemos, las ventajas de tener un dominio y hospedaje &lt;b&gt;propio&lt;/b&gt; son muchas. Actualmente este blog vuelve a su propia casa luego de mucho tiempo suspendido por problemas técnicos.&lt;br /&gt;Ahora somos &lt;b&gt;www.lordvalor.com.ve&lt;/b&gt;  Ya hemos migrado los post que se encuentran acá y desde ahora todo sera publicado en &lt;b&gt;lordvalor.com.ve&lt;/b&gt;  saludos cordiales. </description>
+        <pubDate>Sun, 27 Oct 2013 19:30:00 +0000</pubDate>
+        <link>http://www.Lordvalor.com.ve/2013/10/27/nos-mudamos-lordvalorcomve/</link>
+        <guid isPermaLink="true">http://www.Lordvalor.com.ve/2013/10/27/nos-mudamos-lordvalorcomve/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Cambiar resolución de fotos por lotes desde la consola. </title>
+        <description>&lt;p&gt;Hace unos días tenia la tarea de subir ciertas fotografiás tomadas con una cámara de 8MP a una pagina web, el problema realmente era que cada fotografiá pesaba 2.3MB con una resolución de 3264x2448, algo que a mi parecer no es nada indicado para na galería fotográfica y mucho menos aún con la conexión que tenemos en el país.&lt;/p&gt;  &lt;p&gt;El asunto era cambiar o bajar dicho tamaño sin sacrificar la calidad de la fotografiá y hacerlo a 28 imágenes, investigando un poco di con una forma bastante sencilla a través de la consola linux el único requerimiento para dicha tarea es tener imagemagick instalado.&lt;/p&gt; Instalando imagemagick en debian&lt;br&gt;&lt;code&gt;# aptitude install imagemagick &lt;/code&gt;&lt;br&gt;&lt;br&gt;luego que ya este instaladado vamos al directorio en donde estan las fotografías que queremos trabajar.&lt;br&gt;&lt;br&gt;&lt;code&gt;$ cd /home/ususario/imagene/albun &lt;/code&gt; &lt;br&gt;&lt;br&gt;y ejecutamos &lt;br&gt;&lt;br&gt;&lt;code&gt;$ for IMG in `ls *.jpg`; do convert -sample 20%X20% -quality 85 $IMG reducido-$IMG; done&lt;br&gt;&lt;/code&gt;&lt;p&gt;el tiempo que tarda dependerá de la cantidad de fotos y el tamaño de cada una de ellas.  El nombre  reducido-$IMG seria el prefijo que se le asigna a la fotografía dimensionada, podemos usar el que veamos más conveniente &lt;/p&gt;&lt;p&gt;también podemos hacerlo con otras extensiones como .png, otro detalle que debemos estar pendiente es que algunas cámaras colocan la extensiones con mayúsculas “.JPG” si es así, debemos cambiar dependiendo de nuestros caso.  De igual forma podemos jugar con el tamaño, yo logre una buena imagen de una original de 2.3 mb (3264x2448) a una de 66,2kb (653x490) &lt;/p&gt;espero que les sirva de ayuda.</description>
+        <pubDate>Tue, 04 Jun 2013 01:34:00 +0000</pubDate>
+        <link>http://www.Lordvalor.com.ve/2013/06/04/cambiar-resolucion-de-fotos-por-lotes/</link>
+        <guid isPermaLink="true">http://www.Lordvalor.com.ve/2013/06/04/cambiar-resolucion-de-fotos-por-lotes/</guid>
+        
+        <category>Debian</category>
+        
+        <category>Linux</category>
+        
+        <category>imagemagick</category>
+        
+        <category>Fotografias</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Mi Escritorio de Diciembre</title>
+        <description>&lt;div style=&quot;margin: 0 0 10px 0; padding: 0; font-size: 0.8em; line-height: 1.6em;&quot;&gt;&lt;a href=&quot;http://www.flickr.com/photos/lordvalor/8283714651/&quot; title=&quot;ScreenShot - 14-12-12&quot;&gt;&lt;img src=&quot;http://farm9.staticflickr.com/8220/8283714651_84c92cf518.jpg&quot; alt=&quot;ScreenShot - 14-12-12 by lord_valor&quot; /&gt;&lt;/a&gt;&lt;br/&gt;&lt;span style=&quot;margin: 0;&quot;&gt;&lt;a href=&quot;http://www.flickr.com/photos/lordvalor/8283714651/&quot;&gt;ScreenShot - 14-12-12&lt;/a&gt;, a photo by &lt;a href=&quot;http://www.flickr.com/photos/lordvalor/&quot;&gt;lord_valor&lt;/a&gt; on Flickr.&lt;/span&gt;&lt;/div&gt;&lt;p&gt;ScreenShot - 14-12-12&lt;/p&gt;</description>
+        <pubDate>Tue, 18 Dec 2012 11:49:00 +0000</pubDate>
+        <link>http://www.Lordvalor.com.ve/2012/12/18/mi-escritorio-de-diciembre/</link>
+        <guid isPermaLink="true">http://www.Lordvalor.com.ve/2012/12/18/mi-escritorio-de-diciembre/</guid>
+        
+        <category>Linux</category>
+        
+        <category>Escritorio</category>
+        
+        <category>XFCE</category>
+        
+        <category>Gallery</category>
+        
+        <category>Desktop</category>
+        
+        <category>debian</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Solucionando problema (32) insufficient privileges En en network-manager</title>
+        <description>Recientemente por razones que no importan, volvió a mi nuevamente&lt;br /&gt;mi neetbook &lt;b&gt;Acer Aspire One d-250&lt;/b&gt; y sin dudar lo primero que hice fue eliminar el windows7&lt;br /&gt;e instalar debian.&lt;br /&gt;&lt;br /&gt;por razones obvias de rendimiento me decido por &lt;b&gt;Openbox&lt;/b&gt; como entorno de escritorio&lt;br /&gt;&lt;br /&gt;&lt;a name=&#39;more&#39;&gt;&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;luego de mucho tiempo usando como gestor de interfaces de redes &lt;b&gt;WICD&lt;/b&gt;&lt;br /&gt;decidí que era hora de darle una oportunidad al amando por mucho y odiado por algunos&lt;br /&gt;&lt;b&gt;Network-Manager&lt;/b&gt;&lt;br /&gt;&lt;br /&gt;luego de una breve &lt;br /&gt;&lt;del datetime=&quot;2012-11-20T15:25:07+00:00&quot;&gt;pelea&lt;/del&gt;con el tint2 para poder hacer que network-manager se mostrara en el systemtray&lt;br /&gt;días después tengo la oportunidad de probar mi conexión wifi&lt;br /&gt;pero resulta que al tratar de logearme me tope con un fabuloso aviso diciéndome “Failed to add new connection: (32) insufficient privileges”&lt;br /&gt;&lt;div class=&quot;separator&quot; style=&quot;clear: both; text-align: center;&quot;&gt;&lt;a href=&quot;http://2.bp.blogspot.com/-PQtpoZGRFAs/UP4nWRrka8I/AAAAAAAAAOo/EsMXoXFfsWU/s1600/Captura+de+pantalla+-+121112+-+09:12:24.png&quot; imageanchor=&quot;1&quot; style=&quot;margin-left: 1em; margin-right: 1em;&quot;&gt;&lt;img border=&quot;0&quot; height=&quot;136&quot; src=&quot;http://2.bp.blogspot.com/-PQtpoZGRFAs/UP4nWRrka8I/AAAAAAAAAOo/EsMXoXFfsWU/s320/Captura+de+pantalla+-+121112+-+09:12:24.png&quot; width=&quot;320&quot; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;entonces procedo a investigar cual es la causa de este inconveniente...&lt;br /&gt;y simplemente es que como yo siempre  instalo Debian como sistema base y luego &lt;br /&gt;voy instalando y configurando lo que necesito &lt;br /&gt;encontré la solución y realmente es sencilla&lt;br /&gt;&lt;br /&gt;primero que nada debemos agregar nuestro usuario regular al grup netdev de la siguiente manera&lt;br /&gt;&lt;br /&gt;&lt;code&gt;&lt;br /&gt;adduser tusuario netdev&lt;/code&gt;&lt;br /&gt;&lt;br /&gt;posteriormente nos vamos al directorio /etc/polkit-1/localauthority/50-local.d/&lt;br /&gt;y creamos un archivo con el siguiente nombre org.freedesktop.NetworkManager.pkla&lt;br /&gt;luego y con el editor de su preferencia le agregamos lo siguiente&lt;br /&gt;&lt;br /&gt;&lt;code&gt;&lt;br /&gt;[nm-applet]&lt;br /&gt;Identity=unix-group:netdev&lt;br /&gt;Action=org.freedesktop.NetworkManager.*&lt;br /&gt;ResultAny=yes&lt;br /&gt;ResultInactive=no&lt;br /&gt;ResultActive=yes&lt;/code&gt;&lt;br /&gt;Guardamos&lt;br /&gt;&lt;br /&gt;Reiniciamos el Network-manager&lt;br /&gt;&lt;br /&gt;&lt;code&gt;&lt;br /&gt;/etc/init.d/network-manager restart&lt;/code&gt;&lt;br /&gt;&lt;br /&gt;y listo ya deberíamos poder acceder a nuestra conexión wifi desde el applet del network- manager</description>
+        <pubDate>Tue, 20 Nov 2012 11:13:00 +0000</pubDate>
+        <link>http://www.Lordvalor.com.ve/2012/11/20/solucionando-problema-32-insufficient/</link>
+        <guid isPermaLink="true">http://www.Lordvalor.com.ve/2012/11/20/solucionando-problema-32-insufficient/</guid>
+        
+        <category>Debian</category>
+        
+        <category>Linux</category>
+        
+        <category>Gallery</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Convocatoria: Sedes del CNSL 9.0</title>
+        <description>&lt;h2&gt;Saludos para toda la comunidad del Software Libre en Venezuela.&lt;/h2&gt;&lt;br /&gt;&lt;br /&gt;Esta es la convocatoria para todas las personas, grupos e instituciones que deseen formar parte de la organización del Noveno Congreso Nacional de Software Libre (CNSL 9.0).&lt;br /&gt;&lt;br /&gt;&lt;a name=&#39;more&#39;&gt;&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;&lt;h3&gt;¿Qué es el CNSL?&lt;/h3&gt;&lt;br /&gt;&lt;br /&gt;&lt;b&gt;El Congreso Nacional de Software Libre (CNSL)&lt;/b&gt; es una serie ordenada de eventos itinerantes, el cual todos los años visita una ciudad por semana durante tres meses de conferencias y actividades afines, donde una selección de expertos nacionales e internacionales comparten sus conocimientos sobre GNU/Linux y el Software Libre&lt;br /&gt;&lt;br /&gt;El CNSL busca puntos de encuentro entre innovadores, instituciones, universidades, unidades productivas, colectivos, grupos de usuarios y usuarias, investigadores e investigadoras, docentes y público en general y junto a esa articulación posible en cada una de las ciudades que se visitan, se difunden los valores éticos del Software Libre, como expresión de una cultura solidaria, justa, liberadora y comprometida con la defensa de las libertades fundamentales de los usuarios y usuarias de computadoras, así como en el derecho de todos y todas para la apropiación social del conocimiento.&lt;br /&gt;&lt;br /&gt;Puedes leer aquí más información sobre &lt;a href=&quot;http://cnsl.org.ve/sobre-el-cnsl/&quot; target=&quot;blank_&quot;&gt;qué es el CNSL.&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;&lt;h3&gt;Quiero organizar un CNSL, ¿cómo hago?&lt;/h3&gt;&lt;br /&gt;&lt;br /&gt;Los grupos de personas que deseen formar parte de la organización de una sede del CNSL deberán manifestar su interés enviando un correo a sedes@cnsl.org.ve en el cual deberán colocar su nombre completo, número de teléfono celular y sede para la cual se postula.&lt;br /&gt;&lt;br /&gt;Ya comenzó a organizarse el CNSL 9.0. El llamado es para quienes creen en la participación protagónica, mediante la difusión e implementación de tecnologías justas y emancipadoras en Venezuela.&lt;br /&gt;&lt;br /&gt;¡Conciencia para nuestra Independencia!</description>
+        <pubDate>Sun, 11 Nov 2012 14:20:00 +0000</pubDate>
+        <link>http://www.Lordvalor.com.ve/2012/11/11/convocatoria-sedes-del-cnsl-90/</link>
+        <guid isPermaLink="true">http://www.Lordvalor.com.ve/2012/11/11/convocatoria-sedes-del-cnsl-90/</guid>
+        
+        <category>General</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Instalando Nvdia 9400 GT en debian wheeze/testing</title>
+        <description>&lt;b&gt;&lt;/b&gt;&lt;br /&gt;&lt;h3&gt;&lt;b&gt;Kernel 3.2.0-2-686-pae&lt;/b&gt;&lt;/h3&gt;&lt;br /&gt;&lt;br /&gt;&lt;b&gt;Este procedimiento es compatible con las tarjetas&lt;/b&gt;&lt;br /&gt;&lt;br /&gt;&lt;h3&gt;GeForce 9M series:&lt;/h3&gt;&lt;br /&gt;9800M GTX, 9800M GTS, 9800M GT, 9800M GS, 9700M GTS, 9700M GT, 9650M GT, 9650M GS, 9600M GT, 9600M GS, 9500M GS, 9500M G, 9400M G, 9400M, 9300M GS, 9300M G, 9200M GS, 9100M G&lt;br /&gt;&lt;br /&gt;Si no estas seguro del modelo de tu tarjeta puedes verificar de la siguiente forma&lt;br /&gt;&lt;br /&gt;&lt;a name=&#39;more&#39;&gt;&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;&lt;code&gt;&lt;br /&gt;# lspci | grep VGA&lt;/code&gt;&lt;br /&gt;&lt;br /&gt;y devuelve algo como&lt;br /&gt;&lt;br /&gt;&lt;code&gt;&lt;br /&gt;04:00.0 VGA compatible controller: NVIDIA Corporation G96 [GeForce 9400 GT] (rev a1)&lt;/code&gt;&lt;br /&gt;&lt;br /&gt;Actualmente logre hacer el el cambio exitoso a debian wheeze y to va funcionado excelente excepto por el driver de la tarjeta de video, no es que no esté funcionando si no que&amp;nbsp; no se obtiene el rendimiento adecuado y es por el soporte genérico del driver “nouveau” integrado en el kernel.&lt;br /&gt;&lt;br /&gt;Ahora para hacer funcionar la tarjeta de video vamos hacer lo siguiente...!&lt;br /&gt;&lt;br /&gt;Primero verificamos que&amp;nbsp; tenemos instaladas linux-header y linux-imagen de acuerdo la versión de nuestro kernel en mi caso 3.2.0-2-686-pae&lt;br /&gt;&lt;br /&gt;&lt;code&gt;# aptitude search linux-image&lt;/code&gt;&lt;br /&gt;&lt;br /&gt;mostrara el&amp;nbsp; siguiente resultado:&lt;br /&gt;&lt;br /&gt;&lt;code&gt;&lt;br /&gt;i A linux-image-3.2.0-2-686-pae&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; - Linux 3.2 for modern Pc&lt;/code&gt;&lt;br /&gt;&lt;br /&gt;si al principio muestra una “i” es porque el paquete ya se encuentra instalado si muestra una “p” es por que no esta instalado pero esta disponible para ser instalado.&lt;br /&gt;&lt;br /&gt;si tu caso te muestra una “p” entonces procedemos a&amp;nbsp; instalar de la siguiente forma:&lt;br /&gt;&lt;br /&gt;&lt;code&gt;# aptitude install linux-image-3.2.0-2-686-pae&lt;/code&gt;&lt;br /&gt;&lt;br /&gt;y utilizamos el mismo procedimiento para linux-headers-3.2.0-2-686-pae&lt;br /&gt;&lt;br /&gt;luego de instalar verificamos si el driver&amp;nbsp; nouveau esta cargado de la siguiente forma&lt;br /&gt;&lt;br /&gt;&lt;code&gt;# lsmod&lt;/code&gt;&lt;br /&gt;una manera mas exacta seria con&lt;br /&gt;&lt;br /&gt;&lt;code&gt;lsmod | grap&amp;nbsp; nouveau &lt;/code&gt;&lt;br /&gt;&lt;br /&gt;y lo agregamos a la lista negra para que no se cargue al inicial el sistema.&lt;br /&gt;&lt;br /&gt;Con el editor de texto de tu preferencia abrimos el archivo fbdev-blacklist.conf de la siguiente manera&lt;br /&gt;&lt;br /&gt;&lt;code&gt;# vim.tiny /etc/modprobe.d/fbdev-blacklist.conf&lt;/code&gt;&lt;br /&gt;&lt;br /&gt;agregamos al final de la linea “blacklist nouveau”&amp;nbsp; (sin las comillas)&amp;nbsp; y guardamos los cambios.&lt;br /&gt;&lt;br /&gt;&lt;b&gt; luego instalamos:&lt;/b&gt;&lt;br /&gt;&lt;br /&gt;&lt;code&gt;# aptitude install nvidia-glx nvidia-settings nvidia-xconfig &amp;amp;amp;&amp;amp;amp; nvidia-xconfig&lt;/code&gt;&lt;br /&gt;&lt;br /&gt;luego de instalar seguramente te dirá que el driver nouveau aun se encuentra cargado y que debe reiniciar...! luego de esto ya podremos tener nuestra tarjeta de video funcionando correctamente.&lt;br /&gt;&lt;br /&gt;&lt;a href=&quot;http://blog.lordvalor.com.ve/wp-content/uploads/2012/07/nvidia.png&quot;&gt;&lt;img alt=&quot;&quot; class=&quot;alignnone size-medium wp-image-47&quot; height=&quot;165&quot; src=&quot;http://blog.lordvalor.com.ve/wp-content/uploads/2012/07/nvidia-300x165.png&quot; title=&quot;nvidia-9400&quot; width=&quot;300&quot; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;Espero que les pueda servir de ayuda...!</description>
+        <pubDate>Fri, 06 Jul 2012 11:16:00 +0000</pubDate>
+        <link>http://www.Lordvalor.com.ve/2012/07/06/instalando-nvdia-9400-gt-en-debian_6/</link>
+        <guid isPermaLink="true">http://www.Lordvalor.com.ve/2012/07/06/instalando-nvdia-9400-gt-en-debian_6/</guid>
+        
+        <category>Debian</category>
+        
+        <category>Linux</category>
+        
+        <category>wheeze</category>
+        
+        <category>9400</category>
+        
+        <category>xorg</category>
+        
+        <category>Gallery</category>
+        
+        <category>Video</category>
+        
+        <category>Nvidia</category>
+        
+        <category>Gforce</category>
+        
+        
+      </item>
+    
+  </channel>
+</rss>
