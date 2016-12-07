@@ -1,0 +1,49 @@
+@import url(https://fonts.googleapis.com/css?family=Dosis);
+body {
+  margin-top: 50px;
+  color: #000;
+  font-family: 'Dosis', sans-serif !important;
+  }
+.header {
+  color: #FFF;
+  padding: 20rem 0;
+  background: url("https://s-media-cache-ak0.pinimg.com/736x/d0/1b/e8/d01be84736bae3871f818890ef56bc90.jpg") center center no-repeat;
+  background-size: cover;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .8);
+	-webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .8);
+	-moz-box-shadow: 0 0 10px rgba(0, 0, 0, .8);
+  text-shadow: 1px 1px 1px #000, 3px 3px 5px #000;
+}
+.circular {
+	width: 180px;
+	height: 180px;
+	border-radius: 150px;
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;
+	box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+	-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+	-moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+	}
+footer{  
+  background-color: #000;
+  color: #fff;
+}
+li{
+  display: inline;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    text-decoration: underline;
+}
