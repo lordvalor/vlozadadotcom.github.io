@@ -1,0 +1,40 @@
+body{
+color: #fff;
+background-color: #000;
+font-family: sans-serif;
+margin-top: 0;
+}
+.container{
+  text-align:center;
+  font-size: 5.5em;
+  margin: 1em auto 0 auto;
+
+}
+.expand{
+  letter-spacing:0.4;
+}
+.normal{
+  margin-top:0;
+  font-size:0.14em;
+  letter-spacing:0.5em;
+}
+.phone{
+  font-size: 20%;
+  font-weight:normal;
+  padding-top:5em;
+}
+.micro{
+  color:#666;
+  font-size:0.08em;
+  letter-spacing:0.5em;
+  margin-top: 8em;
+  text-transform:uppercase;
+}
+.micro small{
+  color:#333;
+}
+a{
+  color:#666;
+  text-decoration:none;
+}
+a
