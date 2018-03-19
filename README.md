@@ -1,2 +1,3 @@
-#Personal web blog
+# Personal web blog lordvalor.com
+migrating to `jekyll`
 coming soon
