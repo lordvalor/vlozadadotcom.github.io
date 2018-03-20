@@ -1,0 +1,8 @@
+---
+layout: base
+title: "VALDEMAR LOZADA"
+baseurl: ""
+slug: home
+description: "web blog personal"
+---
+{{ site.title }}
