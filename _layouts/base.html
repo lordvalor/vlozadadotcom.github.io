@@ -5,5 +5,11 @@
 </head>
 <body>
 <p>here</p>
+{% for post in site.post %}
+<h2>post.title</h2>
+<div class="content">
+{{ post.content }}
+</div>
+{% endfor %}
 </body>
 </html>
