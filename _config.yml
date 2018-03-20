@@ -1,3 +1,7 @@
+baseurl: ""
 title: Valdemar Lozada
-
+permalink: "/:title"
+description: "Web Blog de personal"
+include: ['_pages']
 markdown: kramdown
+
