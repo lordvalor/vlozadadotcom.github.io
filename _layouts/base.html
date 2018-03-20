@@ -7,7 +7,7 @@
 <p>here</p>
 <p>start blog</p>
 {% for post in site.posts %}
-<h2>{{ post.title }}</h2>
+<h2><a href="{{ page.baseurl }}/{{ post.title }}">{{ post.title }}</h2>
 <div class="content">
 {{ post.content }}
 </div>
