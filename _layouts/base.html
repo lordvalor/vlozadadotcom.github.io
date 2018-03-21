@@ -3,8 +3,9 @@
 <head>
 {% include head.html %}
 </head>
-<body>
+<body class="w3-light-grey">
 <p>here</p>
+<div class="w3-content">
 <p>start blog</p>
 {% for post in site.posts %}
 <h2><a href="{{ page.baseurl }}/{{ post.title }}">{{ post.title }}</a></h2>
@@ -12,5 +13,6 @@
 {{ post.content }}
 </div>
 {% endfor %}
+</div>
 </body>
 </html>
