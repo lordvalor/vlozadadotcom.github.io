@@ -6,4 +6,7 @@ permalink: /:title
 baseurl: ""
 slug: home
 description: 'web blog personal'
+
+twitter: lordvalor
+github: lordvalor
 ---
