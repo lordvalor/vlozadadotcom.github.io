@@ -7,9 +7,10 @@
 <div class="navbar-">
 <nav class="navbar">
 <div class="container">
-<ul>
-<li class="item">1-</li>
-<li class="item">2-</li>
+  <ul class="right">
+      {% for link in site.data.menu %}
+      <li {% if page.slug == link.name %}class="active"{% endif %}><a href="/{{ link.slug }}">{{ link.name }}</a></li>
+      {% endfor %}
 </ul>
 </div>
 <nav>
