@@ -1,6 +1,8 @@
 ---
 layout: base
 title: 'VALDEMAR LOZADA'
+name: "Valdemar Lozada"
+permalink: /:title
 baseurl: ""
 slug: home
 description: 'web blog personal'
