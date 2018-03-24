@@ -2,6 +2,7 @@
 layout: base
 title: 'VALDEMAR LOZADA'
 name: "Valdemar Lozada"
+author: 'Valdemar Lozada'
 permalink: /:title
 baseurl: ""
 slug: home
@@ -9,4 +10,9 @@ description: 'web blog personal'
 
 twitter: lordvalor
 github: lordvalor
+
+# Format
+markdown: 'kramdown'
+timezone: 'America/Lima'
+highlighter: 'rouge'
 ---
