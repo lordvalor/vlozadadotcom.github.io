@@ -1,0 +1,5 @@
+color background #f9f9fa
+color front div #ffffff
+color border or shadow #e4e4e5
+color bg footer #fcf7ef
+color button #4a69ff

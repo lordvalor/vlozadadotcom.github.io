@@ -1,18 +1,18 @@
----
-layout: base
-title: 'VALDEMAR LOZADA'
+title: "@lordvalor"
+email: vlozada@protonmail.com
 name: "Valdemar Lozada"
 author: 'Valdemar Lozada'
 permalink: /:title
 baseurl: ""
-slug: home
-description: 'web blog personal'
+url: "https://lordvalor.com"
+description: 'blog personal de Valdemar Lozada'
 
-twitter: lordvalor
-github: lordvalor
+twitter_username: lordvalor
+github_username: lordvalor
 
 # Format
-markdown: 'kramdown'
+markdown: kramdown
 timezone: 'America/Lima'
 highlighter: 'rouge'
----
+plugins:
+  - jekyll-feed
