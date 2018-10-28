@@ -1,0 +1,2 @@
+# https://lordvalor.com/
+User-agent: *
