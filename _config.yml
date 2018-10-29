@@ -7,5 +7,11 @@ twitter_username: lordvalor
 github_username: lordvalor
 
 permalink: /:title
-baseurl: 
+baseurl: ""
 url: https://lordvalor.com
+
+
+timezone: 'America/Lima'
+highlighter: 'rouge'
+plugins:
+- jekyll-feed
