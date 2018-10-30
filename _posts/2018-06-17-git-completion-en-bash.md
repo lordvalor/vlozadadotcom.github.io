@@ -1,6 +1,7 @@
 ---
 layout: post
 title: git-completion en bash
+comments: true
 ---
 Si como yo, eres usuario `bash` puedes acceder algunas funciones de tu shell para potenciar tu experiencia con git y hacerlo más amigable. **Git** Realmente envía varios complementos para varios **shell** pero no están activados por defecto.
 

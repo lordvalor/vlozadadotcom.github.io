@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Instalar VirtualBox en Debian
+comments: true
 categories: [Debian, Linux]
 ---
 Primero que nada, es importante saber que **<a href="https://www.virtualbox.org" target="_blank" rel="noopener">VirtualBox</a>** es una herramienta de Virtualización creado por Oracle. Cuando hablamos de **Virtualización**, nos referimos a que podremos realizar una instalación de otros sistemas operativos (Windows, MacOS, BSD, Linux) sobre nuestro sistema anfitrion, o cualquiera que sea el sistema operativo principal que tengamos instalado en nuestro computador.

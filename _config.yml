@@ -9,7 +9,7 @@ github_username: lordvalor
 permalink: /:title
 baseurl: ""
 url: https://lordvalor.com
-
+comments: true
 
 timezone: 'America/Lima'
 highlighter: 'rouge'
