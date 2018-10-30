@@ -7,6 +7,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>{{ page.title }}</title>
 	<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="{{site.baseurl}}/feed.xml" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,300,600">
     <link rel="stylesheet" href="{{site.baseurl}}/assets/css/skeleton.css">
     <link rel="stylesheet" href="{{site.baseurl}}/assets/css/normalize.css">
     <link rel="stylesheet" href="{{site.baseurl}}/assets/css/custom.css">
@@ -18,8 +19,9 @@
 			<div class="twelve columns">
 			{% for post in site.posts %}
 			 	<h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-			 	{{ post.excerpt }}			 
-			{% endfor %}		
+			 	{{ post.excerpt }}
+			 	<hr/>			 
+			{% endfor %}					
 		</div>
 	</div>
 </div>
@@ -32,7 +34,7 @@
 			<a href="https://github.com/lordvalor" target="_blank" rel="noopener nofollow" alt="Github">Github</a> |
 			<a href="https://twitter.com/lordvalor" target="_blank" rel="noopener nofollow" alt="twitter">Twitter</a> | 
 			<a href="https://linkedin.com/" target="_blank" rel="noopener nofollow" alt="Linkedin">Linkedin</a> |
-			<a href="https://lordvalor.com/feed.xml" target="_blank" alt="rss">RSS</a>
+            <a href="{{site.baseurl}}/feed.xml" target="_blank" alt="rss">RSS</a>
 			</p>
 		</div>
 		</div>	 

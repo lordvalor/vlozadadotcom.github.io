@@ -2,4 +2,4 @@
 *.swp
 .git
 .bundle
-_site
+_site/

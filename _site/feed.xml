@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-10-29T19:35:56-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">lordvalor | blog</title><subtitle>Systems Administrator, Web development enthusiast, Minimalist, Open Source activist and free software. User of Debian GNU / Linux.</subtitle><author><name>Valdemar Lozada</name></author><entry><title type="html">git-completion en bash</title><link href="http://localhost:4000/git-completion-en-bash" rel="alternate" type="text/html" title="git-completion en bash" /><published>2018-06-17T00:00:00-05:00</published><updated>2018-06-17T00:00:00-05:00</updated><id>http://localhost:4000/git-completion-en-bash</id><content type="html" xml:base="http://localhost:4000/git-completion-en-bash">&lt;p&gt;Si como yo, eres usuario &lt;code class=&quot;highlighter-rouge&quot;&gt;bash&lt;/code&gt; puedes acceder algunas funciones de tu &lt;abbr title=&quot;A Unix shell is a command-line interpreter or shell that provides a traditional Unix-like command line user interface.&quot;&gt;shell&lt;/abbr&gt; para potenciar tu experiencia con git y hacerlo más amigable. &lt;strong&gt;Git&lt;/strong&gt; Realmente envía varios complementos para varios &lt;strong&gt;&lt;abbr title=&quot;A Unix shell is a command-line interpreter or shell that provides a traditional Unix-like command line user interface.&quot;&gt;shell&lt;/abbr&gt;&lt;/strong&gt; pero no están activados por defecto.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-10-29T22:00:30-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">lordvalor | blog</title><subtitle>Systems Administrator, Web development enthusiast, Minimalist, Open Source activist and free software. User of Debian GNU / Linux.</subtitle><author><name>Valdemar Lozada</name></author><entry><title type="html">git-completion en bash</title><link href="http://localhost:4000/git-completion-en-bash" rel="alternate" type="text/html" title="git-completion en bash" /><published>2018-06-17T00:00:00-05:00</published><updated>2018-06-17T00:00:00-05:00</updated><id>http://localhost:4000/git-completion-en-bash</id><content type="html" xml:base="http://localhost:4000/git-completion-en-bash">&lt;p&gt;Si como yo, eres usuario &lt;code class=&quot;highlighter-rouge&quot;&gt;bash&lt;/code&gt; puedes acceder algunas funciones de tu &lt;abbr title=&quot;A Unix shell is a command-line interpreter or shell that provides a traditional Unix-like command line user interface.&quot;&gt;shell&lt;/abbr&gt; para potenciar tu experiencia con git y hacerlo más amigable. &lt;strong&gt;Git&lt;/strong&gt; Realmente envía varios complementos para varios &lt;strong&gt;&lt;abbr title=&quot;A Unix shell is a command-line interpreter or shell that provides a traditional Unix-like command line user interface.&quot;&gt;shell&lt;/abbr&gt;&lt;/strong&gt; pero no están activados por defecto.&lt;/p&gt;
 
 &lt;p&gt;Unas de las características de &lt;strong&gt;&lt;abbr title=&quot;Git is a version control system for tracking changes in computer files and coordinating work on those files among multiple people.&quot;&gt;GIT&lt;/abbr&gt;&lt;/strong&gt; es su auto completado, por ejemplo si escribimos &lt;code class=&quot;highlighter-rouge&quot;&gt;git chec&lt;/code&gt;y tabulamos dos veces, vera que auto completa a &lt;code class=&quot;highlighter-rouge&quot;&gt;git checkout&lt;/code&gt; si en su caso no lo hace, solamente deberá instalarlo de la siguiente manera:&lt;/p&gt;
 
@@ -15,14 +15,14 @@ Normalmente se desea ver el directorio actual en done nos encontramos trabajando
 
 &lt;p&gt;En este caso debemos, con nuestro editor de (texto preferido) abrir el archivo &lt;code class=&quot;highlighter-rouge&quot;&gt;.bashrc&lt;/code&gt; y agregar al final del archivo lo siguiente:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;## Git Bash Completion and folder status
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;## Git Bash Completion and folder status&lt;/span&gt;
 
-export PS1='\u@\h:\w\[\033[32m\]$(__git_ps1 &quot; (%s)&quot;)\[\033[0m\]$ '
+&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;PS1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'\u@\h:\w\[\033[32m\]$(__git_ps1 &quot; (%s)&quot;)\[\033[0m\]$ '&lt;/span&gt;
 
-export GIT_PS1_SHOWDIRTYSTATE=true
-export GIT_PS1_SHOWSTASHSTATE=true
-export GIT_PS1_SHOWUNTRACKEDFILES=true
-export GIT_PS1_SHOWUPSTREAM=&quot;auto&quot;
+&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;GIT_PS1_SHOWDIRTYSTATE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;true
+export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;GIT_PS1_SHOWSTASHSTATE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;true
+export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;GIT_PS1_SHOWUNTRACKEDFILES&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;true
+export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;GIT_PS1_SHOWUPSTREAM&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;auto&quot;&lt;/span&gt;
 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
@@ -53,7 +53,7 @@ export GIT_PS1_SHOWUPSTREAM=&quot;auto&quot;
 
 &lt;h2 id=&quot;editando-nuestros-sourcelist&quot;&gt;Editando nuestros source.list&lt;/h2&gt;
 
-&lt;p&gt;En este paso, debemos saber cual es la versión que estamos utilizando, en mi caso utilizo &lt;abbr title=&quot;Debian is a Unix-like computer operating system that is composed entirely of free software, and packaged by a group of individuals participating in the Debian Project.&quot;&gt;Debian&lt;/abbr&gt; y usaré &lt;strong&gt;stretch&lt;/strong&gt; y que colocaremos de la siguiente manera:&lt;/p&gt;
+&lt;p&gt;En este paso, debemos saber cual es la versión de linux que estamos utilizando, en mi caso utilizo &lt;abbr title=&quot;Debian is a Unix-like computer operating system that is composed entirely of free software, and packaged by a group of individuals participating in the Debian Project.&quot;&gt;Debian&lt;/abbr&gt; y usaré &lt;strong&gt;stretch&lt;/strong&gt; y la colocaremos de la siguiente manera:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;deb https://download.virtualbox.org/virtualbox/debian contrib
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -73,16 +73,16 @@ export GIT_PS1_SHOWUPSTREAM=&quot;auto&quot;
 
 &lt;p&gt;y si todo sale bien deberia mostrar una salida como la siguiente:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;--2018-05-13 18:06:48-- https://www.virtualbox.org/download/oracle_vbox_2016.asc
-Resolviendo www.virtualbox.org (www.virtualbox.org)... 137.254.60.32
-Conectando con www.virtualbox.org (www.virtualbox.org)[137.254.60.32]:443... conectado.
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;--2018-05-13&lt;/span&gt; 18:06:48-- https://www.virtualbox.org/download/oracle_vbox_2016.asc
+Resolviendo www.virtualbox.org &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;www.virtualbox.org&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;... 137.254.60.32
+Conectando con www.virtualbox.org &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;www.virtualbox.org&lt;span class=&quot;o&quot;&gt;)[&lt;/span&gt;137.254.60.32]:443... conectado.
 Petición HTTP enviada, esperando respuesta... 200 OK
-Longitud: 3157 (3,1K) [text/plain]
-Grabando a: &quot;oracle_vbox_2016.asc&quot;
+Longitud: 3157 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;3,1K&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;text/plain]
+Grabando a: &lt;span class=&quot;s2&quot;&gt;&quot;oracle_vbox_2016.asc&quot;&lt;/span&gt;
 
-oracle_vbox_2016.asc 100%[=====================================================================================&amp;gt;] 3,08K 19,8KB/s en 0,2s
+oracle_vbox_2016.asc 100%[&lt;span class=&quot;o&quot;&gt;======================================&amp;gt;]&lt;/span&gt; 3,08K 19,8KB/s en 0,2s
 
-2018-05-13 18:06:49 (19,8 KB/s) - &quot;oracle_vbox_2016.asc&quot; guardado [3157/3157]
+2018-05-13 18:06:49 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;19,8 KB/s&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; - &lt;span class=&quot;s2&quot;&gt;&quot;oracle_vbox_2016.asc&quot;&lt;/span&gt; guardado &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;3157/3157]
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;Luego de esto procedemos a agregar&lt;/p&gt;
 
@@ -103,7 +103,7 @@ Oracle Corporation (VirtualBox archive signing key) &amp;lt;info@virtualbox.org&
 
 &lt;h2 id=&quot;procedemos-a-instalar&quot;&gt;Procedemos a instalar&lt;/h2&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;$ sudo apt-get update &amp;amp;amp;&amp;amp;amp; sudo apt-get install virtualbox-5.2&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;$ sudo apt-get update &amp;amp;&amp;amp; sudo apt-get install virtualbox-5.2&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;Esto hará que nuestro sistema de actualice con la ultima version de &lt;abbr title=&quot;VirtualBox is a general-purpose full virtualizer for x86 hardware, targeted at server, desktop and embedded use.&quot;&gt;vbox&lt;/abbr&gt; y posteriormente comienza la instalación.&lt;/p&gt;
 
@@ -127,6 +127,4 @@ Donde usuario seria el nombre de usuario de nuestro equipo con el que estamos tr
 &lt;p&gt;Otra manera de hacerlo seria la siguiente:
 &lt;code class=&quot;highlighter-rouge&quot;&gt;$ sudo usermod -G vboxusers -a $USER&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;Espero que les sirva, Cualquier detalle no dudes en dejar sus comentários.&lt;/p&gt;
-
-&lt;p&gt; &lt;/p&gt;</content><author><name>Valdemar Lozada</name></author><summary type="html">Primero que nada, es importante saber que VirtualBox es una herramienta de Virtualización creado por Oracle. Cuando hablamos de Virtualización, nos referimos a que podremos realizar una instalación de otros sistemas operativos (Windows, MacOS, BSD, Linux) sobre nuestro sistema anfitrion, o cualquiera que sea el sistema operativo principal que tengamos instalado en nuestro computador.</summary></entry></feed>
+&lt;p&gt;Espero que les sirva, Cualquier detalle no dude en dejar sus comentários.&lt;/p&gt;</content><author><name>Valdemar Lozada</name></author><category term="virtualbox" /><summary type="html">Primero que nada, es importante saber que VirtualBox es una herramienta de Virtualización creado por Oracle. Cuando hablamos de Virtualización, nos referimos a que podremos realizar una instalación de otros sistemas operativos (Windows, MacOS, BSD, Linux) sobre nuestro sistema anfitrion, o cualquiera que sea el sistema operativo principal que tengamos instalado en nuestro computador.</summary></entry></feed>

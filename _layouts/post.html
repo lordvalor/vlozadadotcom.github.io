@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="{{site.baseurl}}/assets/css/skeleton.css">
     <link rel="stylesheet" href="{{site.baseurl}}/assets/css/normalize.css">
     <link rel="stylesheet" href="{{site.baseurl}}/assets/css/custom.css">
-<script id="dsq-count-scr" src="//https-lordvalor-com.disqus.com/count.js" async></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,300,600">
+    <script id="dsq-count-scr" src="//https-lordvalor-com.disqus.com/count.js" async></script>
 </head>
 <!--end header-->
 <body>
@@ -18,10 +19,11 @@
 		<div class="row">
 			<div class="twelve columns">
 				<h1>{{ page.title }} </h1>
-				<div class="w3-content">
+				<div >
 				{{ content }}
+				<hr/>
                 </div>
-			<div class="twelve columns">
+			<div >
             {% if page.comments %} 
             <div id="disqus_thread"></div>
 <script>
@@ -60,7 +62,7 @@ s.setAttribute('data-timestamp', +new Date());
 			<a href="https://github.com/lordvalor" target="_blank" rel="noopener nofollow" alt="Github">Github</a> |
 			<a href="https://twitter.com/lordvalor" target="_blank" rel="noopener nofollow" alt="twitter">Twitter</a> | 
 			<a href="https://linkedin.com/" target="_blank" rel="noopener nofollow" alt="Linkedin">Linkedin</a> |
-			<a href="{{site.baseurl}}/feed.xml" target="_blank" alt="rss">RSS</a>
+            <a href="{{site.baseurl}}/feed.xml" target="_blank" alt="rss">RSS</a>
 			</p>
 		</div>
 		</div>	 

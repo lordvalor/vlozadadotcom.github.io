@@ -21,7 +21,7 @@ Normalmente se desea ver el directorio actual en done nos encontramos trabajando
 
 En este caso debemos, con nuestro editor de (texto preferido) abrir el archivo `.bashrc` y agregar al final del archivo lo siguiente:
 
-```
+```bash
 ## Git Bash Completion and folder status
 
 export PS1='\u@\h:\w\[\033[32m\]$(__git_ps1 " (%s)")\[\033[0m\]$ '

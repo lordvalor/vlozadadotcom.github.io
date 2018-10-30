@@ -2,6 +2,7 @@
 layout: post
 title: Instalar VirtualBox en Debian
 comments: true
+tags: virtualbox
 categories: [Debian, Linux]
 ---
 Primero que nada, es importante saber que **<a href="https://www.virtualbox.org" target="_blank" rel="noopener">VirtualBox</a>** es una herramienta de Virtualización creado por Oracle. Cuando hablamos de **Virtualización**, nos referimos a que podremos realizar una instalación de otros sistemas operativos (Windows, MacOS, BSD, Linux) sobre nuestro sistema anfitrion, o cualquiera que sea el sistema operativo principal que tengamos instalado en nuestro computador.
@@ -19,7 +20,7 @@ En caso de **Debian** y derivados, lo podremos encontrar en repositorios oficial
 
 ## Editando nuestros source.list
 
-En este paso, debemos saber cual es la versión que estamos utilizando, en mi caso utilizo Debian y usaré **stretch** y que colocaremos de la siguiente manera:
+En este paso, debemos saber cual es la versión de linux que estamos utilizando, en mi caso utilizo Debian y usaré **stretch** y la colocaremos de la siguiente manera:
 
 ```
 deb https://download.virtualbox.org/virtualbox/debian contrib
@@ -41,7 +42,7 @@ Descargamos el archivo
 
 y si todo sale bien deberia mostrar una salida como la siguiente:
 
-```
+```bash
 --2018-05-13 18:06:48-- https://www.virtualbox.org/download/oracle_vbox_2016.asc
 Resolviendo www.virtualbox.org (www.virtualbox.org)... 137.254.60.32
 Conectando con www.virtualbox.org (www.virtualbox.org)[137.254.60.32]:443... conectado.
@@ -49,7 +50,7 @@ Petición HTTP enviada, esperando respuesta... 200 OK
 Longitud: 3157 (3,1K) [text/plain]
 Grabando a: "oracle_vbox_2016.asc"
 
-oracle_vbox_2016.asc 100%[=====================================================================================>] 3,08K 19,8KB/s en 0,2s
+oracle_vbox_2016.asc 100%[======================================>] 3,08K 19,8KB/s en 0,2s
 
 2018-05-13 18:06:49 (19,8 KB/s) - "oracle_vbox_2016.asc" guardado [3157/3157]
 ```
@@ -75,7 +76,7 @@ Oracle Corporation (VirtualBox archive signing key) <info@virtualbox.org></info@
 
 ## Procedemos a instalar
 
-`$ sudo apt-get update &amp;&amp; sudo apt-get install virtualbox-5.2`
+`$ sudo apt-get update && sudo apt-get install virtualbox-5.2`
 
 Esto hará que nuestro sistema de actualice con la ultima version de vbox y posteriormente comienza la instalación.
 
@@ -99,9 +100,8 @@ Donde usuario seria el nombre de usuario de nuestro equipo con el que estamos tr
 Otra manera de hacerlo seria la siguiente:
 `$ sudo usermod -G vboxusers -a $USER`
 
-Espero que les sirva, Cualquier detalle no dudes en dejar sus comentários.
+Espero que les sirva, Cualquier detalle no dude en dejar sus comentários.
 
-&nbsp;
 
 *[VirtualBox]: VirtualBox is a general-purpose full virtualizer for x86 hardware, targeted at server, desktop and embedded use.
 *[vbox]: VirtualBox is a general-purpose full virtualizer for x86 hardware, targeted at server, desktop and embedded use.

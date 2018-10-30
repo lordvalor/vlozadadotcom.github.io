@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="/assets/css/skeleton.css">
     <link rel="stylesheet" href="/assets/css/normalize.css">
     <link rel="stylesheet" href="/assets/css/custom.css">
-<script id="dsq-count-scr" src="//https-lordvalor-com.disqus.com/count.js" async></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,300,600">
+    <script id="dsq-count-scr" src="//https-lordvalor-com.disqus.com/count.js" async></script>
 </head>
 <!--end header-->
 <body>
@@ -18,7 +19,7 @@
 		<div class="row">
 			<div class="twelve columns">
 				<h1>git-completion en bash </h1>
-				<div class="w3-content">
+				<div >
 				<p>Si como yo, eres usuario <code class="highlighter-rouge">bash</code> puedes acceder algunas funciones de tu <abbr title="A Unix shell is a command-line interpreter or shell that provides a traditional Unix-like command line user interface.">shell</abbr> para potenciar tu experiencia con git y hacerlo más amigable. <strong>Git</strong> Realmente envía varios complementos para varios <strong><abbr title="A Unix shell is a command-line interpreter or shell that provides a traditional Unix-like command line user interface.">shell</abbr></strong> pero no están activados por defecto.</p>
 
 <p>Unas de las características de <strong><abbr title="Git is a version control system for tracking changes in computer files and coordinating work on those files among multiple people.">GIT</abbr></strong> es su auto completado, por ejemplo si escribimos <code class="highlighter-rouge">git chec</code>y tabulamos dos veces, vera que auto completa a <code class="highlighter-rouge">git checkout</code> si en su caso no lo hace, solamente deberá instalarlo de la siguiente manera:</p>
@@ -36,14 +37,14 @@ Normalmente se desea ver el directorio actual en done nos encontramos trabajando
 
 <p>En este caso debemos, con nuestro editor de (texto preferido) abrir el archivo <code class="highlighter-rouge">.bashrc</code> y agregar al final del archivo lo siguiente:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>## Git Bash Completion and folder status
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">## Git Bash Completion and folder status</span>
 
-export PS1='\u@\h:\w\[\033[32m\]$(__git_ps1 " (%s)")\[\033[0m\]$ '
+<span class="nb">export </span><span class="nv">PS1</span><span class="o">=</span><span class="s1">'\u@\h:\w\[\033[32m\]$(__git_ps1 " (%s)")\[\033[0m\]$ '</span>
 
-export GIT_PS1_SHOWDIRTYSTATE=true
-export GIT_PS1_SHOWSTASHSTATE=true
-export GIT_PS1_SHOWUNTRACKEDFILES=true
-export GIT_PS1_SHOWUPSTREAM="auto"
+<span class="nb">export </span><span class="nv">GIT_PS1_SHOWDIRTYSTATE</span><span class="o">=</span><span class="nb">true
+export </span><span class="nv">GIT_PS1_SHOWSTASHSTATE</span><span class="o">=</span><span class="nb">true
+export </span><span class="nv">GIT_PS1_SHOWUNTRACKEDFILES</span><span class="o">=</span><span class="nb">true
+export </span><span class="nv">GIT_PS1_SHOWUPSTREAM</span><span class="o">=</span><span class="s2">"auto"</span>
 
 </code></pre></div></div>
 
@@ -62,8 +63,9 @@ export GIT_PS1_SHOWUPSTREAM="auto"
 <p><a href="https://www.git-scm.com/book/en/v2/Appendix-A%3A-Git-in-Other-Environments-Git-in-Bash">Referencia: git-scm </a></p>
 
 
+				<hr/>
                 </div>
-			<div class="twelve columns">
+			<div >
              
             <div id="disqus_thread"></div>
 <script>
@@ -102,7 +104,7 @@ s.setAttribute('data-timestamp', +new Date());
 			<a href="https://github.com/lordvalor" target="_blank" rel="noopener nofollow" alt="Github">Github</a> |
 			<a href="https://twitter.com/lordvalor" target="_blank" rel="noopener nofollow" alt="twitter">Twitter</a> | 
 			<a href="https://linkedin.com/" target="_blank" rel="noopener nofollow" alt="Linkedin">Linkedin</a> |
-			<a href="/feed.xml" target="_blank" alt="rss">RSS</a>
+            <a href="/feed.xml" target="_blank" alt="rss">RSS</a>
 			</p>
 		</div>
 		</div>	 

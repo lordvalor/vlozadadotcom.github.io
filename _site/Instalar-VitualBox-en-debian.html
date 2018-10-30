@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="/assets/css/skeleton.css">
     <link rel="stylesheet" href="/assets/css/normalize.css">
     <link rel="stylesheet" href="/assets/css/custom.css">
-<script id="dsq-count-scr" src="//https-lordvalor-com.disqus.com/count.js" async></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,300,600">
+    <script id="dsq-count-scr" src="//https-lordvalor-com.disqus.com/count.js" async></script>
 </head>
 <!--end header-->
 <body>
@@ -18,7 +19,7 @@
 		<div class="row">
 			<div class="twelve columns">
 				<h1>Instalar VirtualBox en Debian </h1>
-				<div class="w3-content">
+				<div >
 				<p>Primero que nada, es importante saber que <strong><a href="https://www.virtualbox.org" target="_blank" rel="noopener"><abbr title="VirtualBox is a general-purpose full virtualizer for x86 hardware, targeted at server, desktop and embedded use.">VirtualBox</abbr></a></strong> es una herramienta de <abbr title="In computing, virtualization refers to the act of creating a virtual version of something, including virtual computer hardware platforms, storage devices, and computer network resources.">Virtualización</abbr> creado por <abbr title="Oracle Corporation is an American multinational computer technology corporation, headquartered in Redwood Shores, California.">Oracle</abbr>. Cuando hablamos de <strong><abbr title="In computing, virtualization refers to the act of creating a virtual version of something, including virtual computer hardware platforms, storage devices, and computer network resources.">Virtualización</abbr></strong>, nos referimos a que podremos realizar una instalación de otros sistemas operativos (Windows, MacOS, BSD, Linux) sobre nuestro sistema anfitrion, o cualquiera que sea el sistema operativo principal que tengamos instalado en nuestro computador.</p>
 
 <p>Se le hace llamar máquina virtual debido a que básicamente es una computadora instalada dentro de nuestra computadora pero que realmente no interactua con nuestro equipo como lo haría nuestro sistema operativo principal.</p>
@@ -34,7 +35,7 @@
 
 <h2 id="editando-nuestros-sourcelist">Editando nuestros source.list</h2>
 
-<p>En este paso, debemos saber cual es la versión que estamos utilizando, en mi caso utilizo <abbr title="Debian is a Unix-like computer operating system that is composed entirely of free software, and packaged by a group of individuals participating in the Debian Project.">Debian</abbr> y usaré <strong>stretch</strong> y que colocaremos de la siguiente manera:</p>
+<p>En este paso, debemos saber cual es la versión de linux que estamos utilizando, en mi caso utilizo <abbr title="Debian is a Unix-like computer operating system that is composed entirely of free software, and packaged by a group of individuals participating in the Debian Project.">Debian</abbr> y usaré <strong>stretch</strong> y la colocaremos de la siguiente manera:</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>deb https://download.virtualbox.org/virtualbox/debian contrib
 </code></pre></div></div>
@@ -54,16 +55,16 @@
 
 <p>y si todo sale bien deberia mostrar una salida como la siguiente:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>--2018-05-13 18:06:48-- https://www.virtualbox.org/download/oracle_vbox_2016.asc
-Resolviendo www.virtualbox.org (www.virtualbox.org)... 137.254.60.32
-Conectando con www.virtualbox.org (www.virtualbox.org)[137.254.60.32]:443... conectado.
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">--2018-05-13</span> 18:06:48-- https://www.virtualbox.org/download/oracle_vbox_2016.asc
+Resolviendo www.virtualbox.org <span class="o">(</span>www.virtualbox.org<span class="o">)</span>... 137.254.60.32
+Conectando con www.virtualbox.org <span class="o">(</span>www.virtualbox.org<span class="o">)[</span>137.254.60.32]:443... conectado.
 Petición HTTP enviada, esperando respuesta... 200 OK
-Longitud: 3157 (3,1K) [text/plain]
-Grabando a: "oracle_vbox_2016.asc"
+Longitud: 3157 <span class="o">(</span>3,1K<span class="o">)</span> <span class="o">[</span>text/plain]
+Grabando a: <span class="s2">"oracle_vbox_2016.asc"</span>
 
-oracle_vbox_2016.asc 100%[=====================================================================================&gt;] 3,08K 19,8KB/s en 0,2s
+oracle_vbox_2016.asc 100%[<span class="o">======================================&gt;]</span> 3,08K 19,8KB/s en 0,2s
 
-2018-05-13 18:06:49 (19,8 KB/s) - "oracle_vbox_2016.asc" guardado [3157/3157]
+2018-05-13 18:06:49 <span class="o">(</span>19,8 KB/s<span class="o">)</span> - <span class="s2">"oracle_vbox_2016.asc"</span> guardado <span class="o">[</span>3157/3157]
 </code></pre></div></div>
 <p>Luego de esto procedemos a agregar</p>
 
@@ -84,7 +85,7 @@ Oracle Corporation (VirtualBox archive signing key) &lt;info@virtualbox.org&gt;&
 
 <h2 id="procedemos-a-instalar">Procedemos a instalar</h2>
 
-<p><code class="highlighter-rouge">$ sudo apt-get update &amp;amp;&amp;amp; sudo apt-get install virtualbox-5.2</code></p>
+<p><code class="highlighter-rouge">$ sudo apt-get update &amp;&amp; sudo apt-get install virtualbox-5.2</code></p>
 
 <p>Esto hará que nuestro sistema de actualice con la ultima version de <abbr title="VirtualBox is a general-purpose full virtualizer for x86 hardware, targeted at server, desktop and embedded use.">vbox</abbr> y posteriormente comienza la instalación.</p>
 
@@ -108,13 +109,12 @@ Donde usuario seria el nombre de usuario de nuestro equipo con el que estamos tr
 <p>Otra manera de hacerlo seria la siguiente:
 <code class="highlighter-rouge">$ sudo usermod -G vboxusers -a $USER</code></p>
 
-<p>Espero que les sirva, Cualquier detalle no dudes en dejar sus comentários.</p>
-
-<p> </p>
+<p>Espero que les sirva, Cualquier detalle no dude en dejar sus comentários.</p>
 
 
+				<hr/>
                 </div>
-			<div class="twelve columns">
+			<div >
              
             <div id="disqus_thread"></div>
 <script>
@@ -153,7 +153,7 @@ s.setAttribute('data-timestamp', +new Date());
 			<a href="https://github.com/lordvalor" target="_blank" rel="noopener nofollow" alt="Github">Github</a> |
 			<a href="https://twitter.com/lordvalor" target="_blank" rel="noopener nofollow" alt="twitter">Twitter</a> | 
 			<a href="https://linkedin.com/" target="_blank" rel="noopener nofollow" alt="Linkedin">Linkedin</a> |
-			<a href="/feed.xml" target="_blank" alt="rss">RSS</a>
+            <a href="/feed.xml" target="_blank" alt="rss">RSS</a>
 			</p>
 		</div>
 		</div>	 
