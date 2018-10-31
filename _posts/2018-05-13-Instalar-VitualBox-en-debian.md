@@ -3,7 +3,7 @@ layout: post
 title: Instalar VirtualBox en Debian
 comments: true
 tags: virtualbox
-categories: [Debian, Linux]
+categories: ['Debian']  
 ---
 Primero que nada, es importante saber que **<a href="https://www.virtualbox.org" target="_blank" rel="noopener">VirtualBox</a>** es una herramienta de Virtualización creado por Oracle. Cuando hablamos de **Virtualización**, nos referimos a que podremos realizar una instalación de otros sistemas operativos (Windows, MacOS, BSD, Linux) sobre nuestro sistema anfitrion, o cualquiera que sea el sistema operativo principal que tengamos instalado en nuestro computador.
 
@@ -27,7 +27,9 @@ deb https://download.virtualbox.org/virtualbox/debian contrib
 ```
 En donde `mydist` será la versión que usaremos. Luego de comprendido esto, procemos a editar nuestro archivo.
 
-`$ sudo vim /etc/apt/source.list`
+```
+$ sudo vim /etc/apt/source.list
+```
 
 y agregamos el repositorio
 ```
@@ -38,7 +40,9 @@ Ahora, debemos agregar los *public key* para realizar una descarga segura desde 
 
 Descargamos el archivo
 
-`$ wget https://www.virtualbox.org/download/oracle_vbox_2016.asc`
+```
+$ wget https://www.virtualbox.org/download/oracle_vbox_2016.asc
+```
 
 y si todo sale bien deberia mostrar una salida como la siguiente:
 
@@ -58,14 +62,16 @@ Luego de esto procedemos a agregar
 
 ```
 sudo apt-key add oracle_vbox_2016.asc
+  OK
 ```
-```
-OK
-```
+
+
 
 Si queremos realizar todo desde un solo comando para decargar y agregar, se hace de la siguiente manera
 
-`wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -`
+```
+wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
+```
 
 la huella de la llave deberia ser la siguiente
 
@@ -76,7 +82,9 @@ Oracle Corporation (VirtualBox archive signing key) <info@virtualbox.org></info@
 
 ## Procedemos a instalar
 
-`$ sudo apt-get update && sudo apt-get install virtualbox-5.2`
+```
+$ sudo apt-get update && sudo apt-get install virtualbox-5.2
+```
 
 Esto hará que nuestro sistema de actualice con la ultima version de vbox y posteriormente comienza la instalación.
 
@@ -86,7 +94,9 @@ lueg de identificado esto, procedemos a realizar la descarga desde la pagina de 
 
 Luego de haber cultimando la descargar del archivo .deb procemos a la instalacion de la siguiente manera.
 
-`$ sudo dpkg -i ~/Descargas/virtualbox-5.2_5.2.12-122591~Debian~stretch_amd64.deb`
+```
+$ sudo dpkg -i ~/Descargas/virtualbox-5.2_5.2.12-122591~Debian~stretch_amd64.deb
+```
 
 y si todo ha salido como deberia, ya tenemos virtualbox instalado.
 
@@ -94,11 +104,15 @@ y si todo ha salido como deberia, ya tenemos virtualbox instalado.
 
 luego de esto, debemos agregar nuestro usuario al grupo **vboxusers** de la siguiente manera:
 
-`$ sudo usermod -G vboxusers -a usuario`
+```
+$ sudo usermod -G vboxusers -a usuario
+```
 Donde usuario seria el nombre de usuario de nuestro equipo con el que estamos trabajando.
 
 Otra manera de hacerlo seria la siguiente:
-`$ sudo usermod -G vboxusers -a $USER`
+```
+$ sudo usermod -G vboxusers -a $USER
+```
 
 Espero que les sirva, Cualquier detalle no dude en dejar sus comentários.
 

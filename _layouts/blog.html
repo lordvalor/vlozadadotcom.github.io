@@ -7,10 +7,11 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>{{ page.title }}</title>
 	<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="{{site.baseurl}}/feed.xml" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,300,600">
     <link rel="stylesheet" href="{{site.baseurl}}/assets/css/skeleton.css">
-    <link rel="stylesheet" href="{{site.baseurl}}/assets/css/normalize.css">
+    <link rel="stylesheet" src="https://necolas.github.io/normalize.css/8.0.0/normalize.css">
     <link rel="stylesheet" href="{{site.baseurl}}/assets/css/custom.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,300,600">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
 <!--end header-->
 <body>	
@@ -20,6 +21,7 @@
 			{% for post in site.posts %}
 			 	<h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
 			 	{{ post.excerpt }}
+			 	<p><a href="{{ post.url }}">leer más.</a></p>
 			 	<hr/>			 
 			{% endfor %}					
 		</div>

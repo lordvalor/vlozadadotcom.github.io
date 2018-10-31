@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-10-29T22:00:30-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">lordvalor | blog</title><subtitle>Systems Administrator, Web development enthusiast, Minimalist, Open Source activist and free software. User of Debian GNU / Linux.</subtitle><author><name>Valdemar Lozada</name></author><entry><title type="html">git-completion en bash</title><link href="http://localhost:4000/git-completion-en-bash" rel="alternate" type="text/html" title="git-completion en bash" /><published>2018-06-17T00:00:00-05:00</published><updated>2018-06-17T00:00:00-05:00</updated><id>http://localhost:4000/git-completion-en-bash</id><content type="html" xml:base="http://localhost:4000/git-completion-en-bash">&lt;p&gt;Si como yo, eres usuario &lt;code class=&quot;highlighter-rouge&quot;&gt;bash&lt;/code&gt; puedes acceder algunas funciones de tu &lt;abbr title=&quot;A Unix shell is a command-line interpreter or shell that provides a traditional Unix-like command line user interface.&quot;&gt;shell&lt;/abbr&gt; para potenciar tu experiencia con git y hacerlo más amigable. &lt;strong&gt;Git&lt;/strong&gt; Realmente envía varios complementos para varios &lt;strong&gt;&lt;abbr title=&quot;A Unix shell is a command-line interpreter or shell that provides a traditional Unix-like command line user interface.&quot;&gt;shell&lt;/abbr&gt;&lt;/strong&gt; pero no están activados por defecto.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-10-30T22:27:12-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">lordvalor | blog</title><subtitle>Systems Administrator, Web development enthusiast, Minimalist, Open Source activist and free software. User of Debian GNU / Linux.</subtitle><author><name>@lordvalor</name></author><entry><title type="html">git-completion en bash</title><link href="http://localhost:4000/git-completion-en-bash" rel="alternate" type="text/html" title="git-completion en bash" /><published>2018-06-17T00:00:00-05:00</published><updated>2018-06-17T00:00:00-05:00</updated><id>http://localhost:4000/git-completion-en-bash</id><content type="html" xml:base="http://localhost:4000/git-completion-en-bash">&lt;p&gt;Si como yo, eres usuario &lt;code class=&quot;highlighter-rouge&quot;&gt;bash&lt;/code&gt; puedes acceder algunas funciones de tu &lt;abbr title=&quot;A Unix shell is a command-line interpreter or shell that provides a traditional Unix-like command line user interface.&quot;&gt;shell&lt;/abbr&gt; para potenciar tu experiencia con git y hacerlo más amigable. &lt;strong&gt;Git&lt;/strong&gt; Realmente envía varios complementos para varios &lt;strong&gt;&lt;abbr title=&quot;A Unix shell is a command-line interpreter or shell that provides a traditional Unix-like command line user interface.&quot;&gt;shell&lt;/abbr&gt;&lt;/strong&gt; pero no están activados por defecto.&lt;/p&gt;
 
 &lt;p&gt;Unas de las características de &lt;strong&gt;&lt;abbr title=&quot;Git is a version control system for tracking changes in computer files and coordinating work on those files among multiple people.&quot;&gt;GIT&lt;/abbr&gt;&lt;/strong&gt; es su auto completado, por ejemplo si escribimos &lt;code class=&quot;highlighter-rouge&quot;&gt;git chec&lt;/code&gt;y tabulamos dos veces, vera que auto completa a &lt;code class=&quot;highlighter-rouge&quot;&gt;git checkout&lt;/code&gt; si en su caso no lo hace, solamente deberá instalarlo de la siguiente manera:&lt;/p&gt;
 
@@ -38,7 +38,7 @@ export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;GIT_PS1_SHOWUPSTREAM&lt;/sp
 
 &lt;p&gt;&lt;strong&gt;Bash completion&lt;/strong&gt; vienen con documentación útil; Eche un vistazo al contenido de git-completion.bash y git-prompt.sh para más información.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://www.git-scm.com/book/en/v2/Appendix-A%3A-Git-in-Other-Environments-Git-in-Bash&quot;&gt;Referencia: git-scm &lt;/a&gt;&lt;/p&gt;</content><author><name>Valdemar Lozada</name></author><summary type="html">Si como yo, eres usuario bash puedes acceder algunas funciones de tu shell para potenciar tu experiencia con git y hacerlo más amigable. Git Realmente envía varios complementos para varios shell pero no están activados por defecto.</summary></entry><entry><title type="html">Instalar VirtualBox en Debian</title><link href="http://localhost:4000/Instalar-VitualBox-en-debian" rel="alternate" type="text/html" title="Instalar VirtualBox en Debian" /><published>2018-05-13T00:00:00-05:00</published><updated>2018-05-13T00:00:00-05:00</updated><id>http://localhost:4000/Instalar-VitualBox-en-debian</id><content type="html" xml:base="http://localhost:4000/Instalar-VitualBox-en-debian">&lt;p&gt;Primero que nada, es importante saber que &lt;strong&gt;&lt;a href=&quot;https://www.virtualbox.org&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;abbr title=&quot;VirtualBox is a general-purpose full virtualizer for x86 hardware, targeted at server, desktop and embedded use.&quot;&gt;VirtualBox&lt;/abbr&gt;&lt;/a&gt;&lt;/strong&gt; es una herramienta de &lt;abbr title=&quot;In computing, virtualization refers to the act of creating a virtual version of something, including virtual computer hardware platforms, storage devices, and computer network resources.&quot;&gt;Virtualización&lt;/abbr&gt; creado por &lt;abbr title=&quot;Oracle Corporation is an American multinational computer technology corporation, headquartered in Redwood Shores, California.&quot;&gt;Oracle&lt;/abbr&gt;. Cuando hablamos de &lt;strong&gt;&lt;abbr title=&quot;In computing, virtualization refers to the act of creating a virtual version of something, including virtual computer hardware platforms, storage devices, and computer network resources.&quot;&gt;Virtualización&lt;/abbr&gt;&lt;/strong&gt;, nos referimos a que podremos realizar una instalación de otros sistemas operativos (Windows, MacOS, BSD, Linux) sobre nuestro sistema anfitrion, o cualquiera que sea el sistema operativo principal que tengamos instalado en nuestro computador.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.git-scm.com/book/en/v2/Appendix-A%3A-Git-in-Other-Environments-Git-in-Bash&quot;&gt;Referencia: git-scm &lt;/a&gt;&lt;/p&gt;</content><author><name>@lordvalor</name></author><summary type="html">Si como yo, eres usuario bash puedes acceder algunas funciones de tu shell para potenciar tu experiencia con git y hacerlo más amigable. Git Realmente envía varios complementos para varios shell pero no están activados por defecto.</summary></entry><entry><title type="html">Instalar VirtualBox en Debian</title><link href="http://localhost:4000/Instalar-VitualBox-en-debian" rel="alternate" type="text/html" title="Instalar VirtualBox en Debian" /><published>2018-05-13T00:00:00-05:00</published><updated>2018-05-13T00:00:00-05:00</updated><id>http://localhost:4000/Instalar-VitualBox-en-debian</id><content type="html" xml:base="http://localhost:4000/Instalar-VitualBox-en-debian">&lt;p&gt;Primero que nada, es importante saber que &lt;strong&gt;&lt;a href=&quot;https://www.virtualbox.org&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;abbr title=&quot;VirtualBox is a general-purpose full virtualizer for x86 hardware, targeted at server, desktop and embedded use.&quot;&gt;VirtualBox&lt;/abbr&gt;&lt;/a&gt;&lt;/strong&gt; es una herramienta de &lt;abbr title=&quot;In computing, virtualization refers to the act of creating a virtual version of something, including virtual computer hardware platforms, storage devices, and computer network resources.&quot;&gt;Virtualización&lt;/abbr&gt; creado por &lt;abbr title=&quot;Oracle Corporation is an American multinational computer technology corporation, headquartered in Redwood Shores, California.&quot;&gt;Oracle&lt;/abbr&gt;. Cuando hablamos de &lt;strong&gt;&lt;abbr title=&quot;In computing, virtualization refers to the act of creating a virtual version of something, including virtual computer hardware platforms, storage devices, and computer network resources.&quot;&gt;Virtualización&lt;/abbr&gt;&lt;/strong&gt;, nos referimos a que podremos realizar una instalación de otros sistemas operativos (Windows, MacOS, BSD, Linux) sobre nuestro sistema anfitrion, o cualquiera que sea el sistema operativo principal que tengamos instalado en nuestro computador.&lt;/p&gt;
 
 &lt;p&gt;Se le hace llamar máquina virtual debido a que básicamente es una computadora instalada dentro de nuestra computadora pero que realmente no interactua con nuestro equipo como lo haría nuestro sistema operativo principal.&lt;/p&gt;
 
@@ -59,7 +59,8 @@ export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;GIT_PS1_SHOWUPSTREAM&lt;/sp
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;En donde &lt;code class=&quot;highlighter-rouge&quot;&gt;mydist&lt;/code&gt; será la versión que usaremos. Luego de comprendido esto, procemos a editar nuestro archivo.&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;$ sudo vim /etc/apt/source.list&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ sudo vim /etc/apt/source.list
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;y agregamos el repositorio&lt;/p&gt;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;deb https://download.virtualbox.org/virtualbox/debian stretch contrib
@@ -69,7 +70,8 @@ export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;GIT_PS1_SHOWUPSTREAM&lt;/sp
 
 &lt;p&gt;Descargamos el archivo&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;$ wget https://www.virtualbox.org/download/oracle_vbox_2016.asc&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ wget https://www.virtualbox.org/download/oracle_vbox_2016.asc
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;y si todo sale bien deberia mostrar una salida como la siguiente:&lt;/p&gt;
 
@@ -87,13 +89,13 @@ oracle_vbox_2016.asc 100%[&lt;span class=&quot;o&quot;&gt;======================
 &lt;p&gt;Luego de esto procedemos a agregar&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-key add oracle_vbox_2016.asc
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;OK
+  OK
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Si queremos realizar todo desde un solo comando para decargar y agregar, se hace de la siguiente manera&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;la huella de la llave deberia ser la siguiente&lt;/p&gt;
 
@@ -103,7 +105,8 @@ Oracle Corporation (VirtualBox archive signing key) &amp;lt;info@virtualbox.org&
 
 &lt;h2 id=&quot;procedemos-a-instalar&quot;&gt;Procedemos a instalar&lt;/h2&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;$ sudo apt-get update &amp;amp;&amp;amp; sudo apt-get install virtualbox-5.2&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ sudo apt-get update &amp;amp;&amp;amp; sudo apt-get install virtualbox-5.2
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Esto hará que nuestro sistema de actualice con la ultima version de &lt;abbr title=&quot;VirtualBox is a general-purpose full virtualizer for x86 hardware, targeted at server, desktop and embedded use.&quot;&gt;vbox&lt;/abbr&gt; y posteriormente comienza la instalación.&lt;/p&gt;
 
@@ -113,7 +116,8 @@ lueg de identificado esto, procedemos a realizar la descarga desde la pagina de 
 
 &lt;p&gt;Luego de haber cultimando la descargar del archivo .deb procemos a la instalacion de la siguiente manera.&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;$ sudo dpkg -i ~/Descargas/virtualbox-5.2_5.2.12-122591~Debian~stretch_amd64.deb&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ sudo dpkg -i ~/Descargas/virtualbox-5.2_5.2.12-122591~Debian~stretch_amd64.deb
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;y si todo ha salido como deberia, ya tenemos virtualbox instalado.&lt;/p&gt;
 
@@ -121,10 +125,12 @@ lueg de identificado esto, procedemos a realizar la descarga desde la pagina de 
 
 &lt;p&gt;luego de esto, debemos agregar nuestro usuario al grupo &lt;strong&gt;vboxusers&lt;/strong&gt; de la siguiente manera:&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;$ sudo usermod -G vboxusers -a usuario&lt;/code&gt;
-Donde usuario seria el nombre de usuario de nuestro equipo con el que estamos trabajando.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ sudo usermod -G vboxusers -a usuario
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Donde usuario seria el nombre de usuario de nuestro equipo con el que estamos trabajando.&lt;/p&gt;
 
-&lt;p&gt;Otra manera de hacerlo seria la siguiente:
-&lt;code class=&quot;highlighter-rouge&quot;&gt;$ sudo usermod -G vboxusers -a $USER&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Otra manera de hacerlo seria la siguiente:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ sudo usermod -G vboxusers -a $USER
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Espero que les sirva, Cualquier detalle no dude en dejar sus comentários.&lt;/p&gt;</content><author><name>Valdemar Lozada</name></author><category term="virtualbox" /><summary type="html">Primero que nada, es importante saber que VirtualBox es una herramienta de Virtualización creado por Oracle. Cuando hablamos de Virtualización, nos referimos a que podremos realizar una instalación de otros sistemas operativos (Windows, MacOS, BSD, Linux) sobre nuestro sistema anfitrion, o cualquiera que sea el sistema operativo principal que tengamos instalado en nuestro computador.</summary></entry></feed>
+&lt;p&gt;Espero que les sirva, Cualquier detalle no dude en dejar sus comentários.&lt;/p&gt;</content><author><name>@lordvalor</name></author><category term="virtualbox" /><summary type="html">Primero que nada, es importante saber que VirtualBox es una herramienta de Virtualización creado por Oracle. Cuando hablamos de Virtualización, nos referimos a que podremos realizar una instalación de otros sistemas operativos (Windows, MacOS, BSD, Linux) sobre nuestro sistema anfitrion, o cualquiera que sea el sistema operativo principal que tengamos instalado en nuestro computador.</summary></entry></feed>

@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <head>	
 	<meta charset=utf-8>	
-	<meta name="author" content="Valdemar Lozada"/>
+	<meta name="author" content="@lordvalor"/>
 	<meta name=description content="Systems Administrator, Web development enthusiast, Minimalist, Open Source activist and free software. User of Debian GNU / Linux.">	
 	<meta name=viewport content="width=device-width, initial-scale=1">	
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Instalar VirtualBox en Debian</title>
 	<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed.xml" />
     <link rel="stylesheet" href="/assets/css/skeleton.css">
-    <link rel="stylesheet" href="/assets/css/normalize.css">
+    <link rel="stylesheet" src="https://necolas.github.io/normalize.css/8.0.0/normalize.css">
     <link rel="stylesheet" href="/assets/css/custom.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,300,600">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script id="dsq-count-scr" src="//https-lordvalor-com.disqus.com/count.js" async></script>
 </head>
 <!--end header-->
@@ -19,6 +20,7 @@
 		<div class="row">
 			<div class="twelve columns">
 				<h1>Instalar VirtualBox en Debian </h1>
+				<p>Publicado el 2018-05-13 00:00:00 -0500 | por @lordvalor | en Debian </p>
 				<div >
 				<p>Primero que nada, es importante saber que <strong><a href="https://www.virtualbox.org" target="_blank" rel="noopener"><abbr title="VirtualBox is a general-purpose full virtualizer for x86 hardware, targeted at server, desktop and embedded use.">VirtualBox</abbr></a></strong> es una herramienta de <abbr title="In computing, virtualization refers to the act of creating a virtual version of something, including virtual computer hardware platforms, storage devices, and computer network resources.">Virtualización</abbr> creado por <abbr title="Oracle Corporation is an American multinational computer technology corporation, headquartered in Redwood Shores, California.">Oracle</abbr>. Cuando hablamos de <strong><abbr title="In computing, virtualization refers to the act of creating a virtual version of something, including virtual computer hardware platforms, storage devices, and computer network resources.">Virtualización</abbr></strong>, nos referimos a que podremos realizar una instalación de otros sistemas operativos (Windows, MacOS, BSD, Linux) sobre nuestro sistema anfitrion, o cualquiera que sea el sistema operativo principal que tengamos instalado en nuestro computador.</p>
 
@@ -41,7 +43,8 @@
 </code></pre></div></div>
 <p>En donde <code class="highlighter-rouge">mydist</code> será la versión que usaremos. Luego de comprendido esto, procemos a editar nuestro archivo.</p>
 
-<p><code class="highlighter-rouge">$ sudo vim /etc/apt/source.list</code></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo vim /etc/apt/source.list
+</code></pre></div></div>
 
 <p>y agregamos el repositorio</p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>deb https://download.virtualbox.org/virtualbox/debian stretch contrib
@@ -51,7 +54,8 @@
 
 <p>Descargamos el archivo</p>
 
-<p><code class="highlighter-rouge">$ wget https://www.virtualbox.org/download/oracle_vbox_2016.asc</code></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ wget https://www.virtualbox.org/download/oracle_vbox_2016.asc
+</code></pre></div></div>
 
 <p>y si todo sale bien deberia mostrar una salida como la siguiente:</p>
 
@@ -69,13 +73,13 @@ oracle_vbox_2016.asc 100%[<span class="o">======================================
 <p>Luego de esto procedemos a agregar</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-key add oracle_vbox_2016.asc
-</code></pre></div></div>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>OK
+  OK
 </code></pre></div></div>
 
 <p>Si queremos realizar todo desde un solo comando para decargar y agregar, se hace de la siguiente manera</p>
 
-<p><code class="highlighter-rouge">wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -</code></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
+</code></pre></div></div>
 
 <p>la huella de la llave deberia ser la siguiente</p>
 
@@ -85,7 +89,8 @@ Oracle Corporation (VirtualBox archive signing key) &lt;info@virtualbox.org&gt;&
 
 <h2 id="procedemos-a-instalar">Procedemos a instalar</h2>
 
-<p><code class="highlighter-rouge">$ sudo apt-get update &amp;&amp; sudo apt-get install virtualbox-5.2</code></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo apt-get update &amp;&amp; sudo apt-get install virtualbox-5.2
+</code></pre></div></div>
 
 <p>Esto hará que nuestro sistema de actualice con la ultima version de <abbr title="VirtualBox is a general-purpose full virtualizer for x86 hardware, targeted at server, desktop and embedded use.">vbox</abbr> y posteriormente comienza la instalación.</p>
 
@@ -95,7 +100,8 @@ lueg de identificado esto, procedemos a realizar la descarga desde la pagina de 
 
 <p>Luego de haber cultimando la descargar del archivo .deb procemos a la instalacion de la siguiente manera.</p>
 
-<p><code class="highlighter-rouge">$ sudo dpkg -i ~/Descargas/virtualbox-5.2_5.2.12-122591~Debian~stretch_amd64.deb</code></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo dpkg -i ~/Descargas/virtualbox-5.2_5.2.12-122591~Debian~stretch_amd64.deb
+</code></pre></div></div>
 
 <p>y si todo ha salido como deberia, ya tenemos virtualbox instalado.</p>
 
@@ -103,17 +109,19 @@ lueg de identificado esto, procedemos a realizar la descarga desde la pagina de 
 
 <p>luego de esto, debemos agregar nuestro usuario al grupo <strong>vboxusers</strong> de la siguiente manera:</p>
 
-<p><code class="highlighter-rouge">$ sudo usermod -G vboxusers -a usuario</code>
-Donde usuario seria el nombre de usuario de nuestro equipo con el que estamos trabajando.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo usermod -G vboxusers -a usuario
+</code></pre></div></div>
+<p>Donde usuario seria el nombre de usuario de nuestro equipo con el que estamos trabajando.</p>
 
-<p>Otra manera de hacerlo seria la siguiente:
-<code class="highlighter-rouge">$ sudo usermod -G vboxusers -a $USER</code></p>
+<p>Otra manera de hacerlo seria la siguiente:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo usermod -G vboxusers -a $USER
+</code></pre></div></div>
 
 <p>Espero que les sirva, Cualquier detalle no dude en dejar sus comentários.</p>
 
 
 				<hr/>
-                </div>
+             </div>                          
 			<div >
              
             <div id="disqus_thread"></div>
