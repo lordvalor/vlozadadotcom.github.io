@@ -15,7 +15,8 @@ timezone: 'America/Lima'
 highlighter: 'rouge'
 plugins:
 - jekyll-feed
-
+generator: 'Jekyll - Github Pages'
 exclude:
+- CNAME
 - .gitignore
 - README.md
