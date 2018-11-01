@@ -1,0 +1,21 @@
+name: lordvalor | blog
+author: "@lordvalor"
+description: Systems Administrator, Web development enthusiast, Minimalist, Open Source activist and free software. User of Debian GNU / Linux.
+author_email: vlozada@protonmail.com
+
+twitter_username: lordvalor
+github_username: lordvalor
+
+permalink: /:title
+baseurl: ""
+url: https://lordvalor.com
+comments: true
+
+timezone: 'America/Lima'
+highlighter: 'rouge'
+plugins:
+- jekyll-feed
+
+exclude:
+- .gitignore
+- README.md
