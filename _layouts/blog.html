@@ -18,13 +18,17 @@
 <body>	
 	<div class="container">
 		<div class="row">
-			<div class="twelve columns">
-			{% for post in site.posts %}
+			<div class="nine columns">
+				{% for post in site.posts %}				
 			 	<h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
 			 	{{ post.excerpt }}
 			 	<p><a href="{{ post.url }}">leer más.</a></p>
 			 	<hr/>			 
 			{% endfor %}					
+		</div>
+		<div class="three columns">
+			<h2>sidebar</h2>
+			<p>Lorem ipsum es el texto que se usa habitualmente en diseño gráfico en demostraciones de tipografías o de borradores de diseño para probar el diseño visual antes de insertar el texto final.</p>
 		</div>
 	</div>
 </div>
