@@ -1,0 +1,291 @@
+	<!DOCTYPE html>
+<!--[if IE 8]>
+    <html xmlns="http://www.w3.org/1999/xhtml" class="ie8" lang="en-US">
+  <![endif]-->
+  <!--[if !(IE 8) ]><!-->
+  <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+  <!--<![endif]-->
+  <head>	
+   <meta charset=utf-8>	
+   <meta name="author" content="@lordvalor"/>
+   <meta name=description content="Instalación Básica de Prestashop 1.7 en una instancia AWS ec2 en ubuntu  Instalación paso a paso en EC2-AWS on ubuntu-serverHerramientas:  wget  unzip  ssh  ...">	
+   <meta name=viewport content="width=device-width, initial-scale=1">	
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="generator" content="Jekyll - Github Pages" />
+   <title>Instalación Prestashop 1.7 en AWS</title>
+   <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed.xml" />
+   <link rel="stylesheet" href="/assets/css/skeleton.css">
+   <link rel="stylesheet" src="https://necolas.github.io/normalize.css/8.0.0/normalize.css">
+   <link rel="stylesheet" href="/assets/css/custom.css">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,300,600">
+   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+   <script id="dsq-count-scr" src="//https-lordvalor-com.disqus.com/count.js" async></script>
+<!--end header-->
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="twelve columns">
+				<h1>Instalación Prestashop 1.7 en AWS </h1>
+				<p>Publicado el Jun 22, 2017 | por @lordvalor | en  Prestashop </p>
+				<div >
+					<p>Instalación Básica de <a href="href=https://www.prestashop.com/en">Prestashop 1.7</a> en una instancia <a href="https://aws.amazon.com/">AWS</a> ec2 en ubuntu
+<!--more--></p>
+<blockquote>
+  <p>Instalación paso a paso en <em>EC2-AWS</em> on <em>ubuntu-server</em></p>
+</blockquote>
+
+<!--more-->
+<p>Herramientas:</p>
+
+<ul>
+  <li>wget</li>
+  <li>unzip</li>
+  <li>ssh</li>
+  <li>chmod chown</li>
+</ul>
+
+<h2 id="conectando-servidor-desarrollo">Conectando “servidor desarrollo.”</h2>
+<p>Para conectarnos al Servidor Desarrollo, usando las credenciales asignadas de la siguiente manera:</p>
+
+<p><code class="highlighter-rouge"> ssh -i ~./ssh/keyName.pem usuario@ec2-xx-x-xx-228.compute-1.amazonaws.com </code></p>
+
+<h2 id="1-descargando-prestashop-version-17-estable">1 Descargando PrestaShop Version 1.7 Estable.</h2>
+<p>En este caso, trabajaremos bajo el directorio /var/www/html/</p>
+
+<p><code class="highlighter-rouge">cd /var/www/html/</code></p>
+
+<p>y creamos el directorio donde instalaremos, para este caso le llamaremos <code class="highlighter-rouge">ps_test</code></p>
+
+<p>creamos el directorio</p>
+
+<p><code class="highlighter-rouge"> sudo mkdir ps_test</code></p>
+
+<blockquote>
+  <p>si solicita contraseña, coloca la misma de las credencial de usuario al conectarse.</p>
+</blockquote>
+
+<p>entramos al directorio creado.</p>
+
+<p><code class="highlighter-rouge">cd ps_test</code></p>
+
+<h2 id="descarga">Descarga</h2>
+
+<p>Procedemos a descarar prestashop de la siguiente manera, usando el comando <code class="highlighter-rouge">wget</code>.</p>
+
+<p><code class="highlighter-rouge"> sudo wget https://download.prestashop.com/download/releases/prestashop_1.7.1.2.zip</code></p>
+
+<p>Luego de terminar la descarga, procedemos a descomprimir:</p>
+
+<p><code class="highlighter-rouge">unzip prestashop_1.7.1.2.zip</code></p>
+
+<p>obtendremos la siguiente salida:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Archive:  prestashop_1.7.1.2.zip
+  inflating: prestashop.zip          
+  inflating: index.php               
+  inflating: Install_PrestaShop.html
+</code></pre></div></div>
+<p>En este punto, si hemos seguido paso a paso, podriamos acceder a travez del navegador y obtendremos la primera pagina de Prestashop que nos indica que podemos continua con la instalación:</p>
+
+<p><code class="highlighter-rouge">http://120.xx.xx.xx/ps_test/</code></p>
+
+<blockquote>
+  <p>Donde <em>120.xx.xx.xx</em> será la IP de nuestro servidor.</p>
+</blockquote>
+
+<h2 id="2-creando-db-mysql">2 Creando DB mysql</h2>
+
+<p>Conectando a mysql (Debe solicitar credenciales para acceder a la Instancia mysql).</p>
+
+<p><code class="highlighter-rouge">mysql -u usuario -p</code></p>
+
+<blockquote>
+  <p>donde “usuario” y password será el proporcionado por el administrador de sistemas.</p>
+</blockquote>
+
+<p>luego de acceder a nuestra instancia</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 140
+Server version: 5.7.18-0ubuntu0.16.04.1 (Ubuntu)
+
+Copyright (c) 2000, 2017, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql&gt;
+
+</code></pre></div></div>
+<p>Para ver los nombres de las DB’s existentes Escibimos lo siguiente:</p>
+
+<p><code class="highlighter-rouge">show databases;</code></p>
+
+<p>y obtendremos la siguiente salida:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> mysql&gt; show databases;
++--------------------+
+| Database           |
++--------------------+
+|db_tes1             |
+|db_tes1.1           |
+|db_tes2             |
++--------------------+
+</code></pre></div></div>
+
+<p>De esa manera veificamos que no se repita el nombre de la db que usaremos.</p>
+
+<p>Precedemos a crear la DB necesaria para nuestro prestaShop de prueba.</p>
+
+<p><code class="highlighter-rouge">create database prestashop_test;</code></p>
+
+<p>eso nos devolverá lo siguiente:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Query OK, 1 row affected (0.00 sec)
+</code></pre></div></div>
+
+<p>para verificar que se ha creado nuestra DB con el nombre asignado, volvemos a escribir:</p>
+
+<p><code class="highlighter-rouge">show databases;</code></p>
+
+<p>y deberiamos ver lo siguiente:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> mysql&gt; show databases;
++--------------------+
+| Database           |
++--------------------+
+|db_tes1             |
+|db_tes1.1           |
+|db_tes2             |
+|prestashop_test     |
++--------------------+
+</code></pre></div></div>
+
+<p>Hasta acá, ya tenemos preparada nuestra DB para continuar con la instalación y podemos salir de nuestra instancia MYSQL:</p>
+
+<p>escribimos.</p>
+
+<p><code class="highlighter-rouge">\q</code></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Bye 
+</code></pre></div></div>
+<h2 id="instalación">Instalación.</h2>
+
+<p>Ahora que ya tenemos todo preparado para la instalación, debememos descomprimir nuestra Tienda srestaShop:</p>
+
+<p><code class="highlighter-rouge"> sudo unzip prestashop.zip</code></p>
+
+<p>Luego que comienza a descomprimir, en algun punto nos pide reemplazar el archivo index.php existente:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>replace index.php? [y]es, [n]o, [A]ll, [N]one, [r]ename:
+</code></pre></div></div>
+<p>Y le decimos que si, presionando <code class="highlighter-rouge">y</code> [y]es:</p>
+
+<p>En este punto, si todo ha salido sin problemas, deberiamos ir a nuestro navegador y escribimos nuevamente:</p>
+
+<p><code class="highlighter-rouge">http://120.xx.xx.xx/ps_test/</code></p>
+
+<blockquote>
+  <p>Donde <em>120.xx.xx.xx</em> será la IP de nuestro servidor.</p>
+</blockquote>
+
+<p>y automaticamente seremos redireccionados a la pagina de instalación:</p>
+
+<p><code class="highlighter-rouge">http://120.xx.xx.xx/ps_test/install/</code></p>
+
+<p>El cual nos muestra un asistente para continuar la configuración de la tienda:</p>
+
+<ul>
+  <li>Seleccionamos el Idioma y presionamos [NEXT].</li>
+  <li>Aceptamos el License Agreements y presionamos  [NEXT].</li>
+</ul>
+
+<p>En este punto, probablemente nos muestra una ventana con algunos <em>Warning</em> relacionados con permisos de nuestros archivos.</p>
+
+<p>Regresamos a nuestro terminal y nos regresamos al directorio principal para asignar los permisos necesarios:</p>
+
+<p><code class="highlighter-rouge">cd /var/www/html/</code></p>
+
+<p>escribimos los siguientes comandos:</p>
+
+<p><code class="highlighter-rouge"> sudo chown -R www-data:www-data ps_test</code></p>
+
+<blockquote>
+  <p>esto asigna el propietario y grupo del servidor web para obtener permisos de escritura.</p>
+</blockquote>
+
+<p>Si regresamos a nuestro navegador, presionamos “REFRESH” y deberia mostrar un cuadro verde con el siguiente mensaje:</p>
+
+<p><em>PrestaShop compatibility with your system environment has been verified!</em></p>
+
+<p>Presionamos [NEXT] y nos pedira los datos sobre nuestra tienda como el nombre, direccion, email, país, usuario administrador, etc.</p>
+
+<p>completamos todos los datos y presionamos [NEXT].</p>
+
+<blockquote>
+  <p><em>NO OLVIDES LA CONTRASEÑA QUE LE COLOCASTE</em></p>
+</blockquote>
+
+<h2 id="conectando-con-la-base-de-datos">Conectando con la base de datos.</h2>
+
+<p>En este punto, el sistema te solicita los datos para conectarte a la DB que creamos en el paso 2,</p>
+
+<p>Los datos que solicita son los siguientes:</p>
+
+<ul>
+  <li>“Database server address” podremos dejar como viene por defecto <code class="highlighter-rouge">127.0.0.1</code> o escribimos <code class="highlighter-rouge">localhost</code>.</li>
+  <li>“Database name” acá escribimos el nombre de la db que hemos creado, en este ejemplo se usó <code class="highlighter-rouge">prestashop_test</code></li>
+  <li>“Database login” Aqui colocas el usuario que te haya asignado el Administador de Sistemas.</li>
+  <li>“Database password” y Aca, el password que te haya asignador el Administador de Sistemas.</li>
+  <li>“Tables prefix” hace referencia a prefijo que utilizaran las tablas creadas por PrestaShop, esto es mejor dejarlo extamente como está. por defecto es <code class="highlighter-rouge">ps_</code></li>
+</ul>
+
+<p>Presionamos [NEXT] y lograremos ver una barra de progreso realizando la instalación de nuestra tienda y si todo sale perfecto lograremos ver el siguiente mensaje:</p>
+
+<blockquote>
+  <p>Your installation is finished! You have just finished installing your shop. Thank you for using PrestaShop! Please remember your login information:</p>
+</blockquote>
+
+
+					<hr/>
+				</div>                          
+				<div >
+				 
+			<div id="disqus_thread"></div>
+		<script>
+
+	
+	(function() { // DON'T EDIT BELOW THIS LINE
+		var d = document, s = d.createElement('script');
+		s.src = 'https://https-lordvalor-com.disqus.com/embed.js';
+		s.setAttribute('data-timestamp', +new Date());
+		(d.head || d.body).appendChild(s);
+	})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+</div>
+<!-- comments-->
+</div>
+</div>
+</div>
+
+<!--start footer-->	
+<div class="container">
+	<div clas="row">
+		<div class="twelve columns">
+			<p>Copyright &copy; 2018 Valdemar Lozada</p>
+			<p>
+				<a href="https://github.com/lordvalor" target="_blank" rel="noopener nofollow" alt="Github">Github</a> |
+				<a href="https://twitter.com/lordvalor" target="_blank" rel="noopener nofollow" alt="twitter">Twitter</a> | 
+				<a href="https://linkedin.com/" target="_blank" rel="noopener nofollow" alt="Linkedin">Linkedin</a> |
+				<a href="/feed.xml" target="_blank" alt="rss">RSS</a>
+			</p>
+		</div>
+	</div>	 
+</div> 
+</body>
+</html>

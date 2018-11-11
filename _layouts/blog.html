@@ -1,56 +1,23 @@
 <!DOCTYPE html>
-  <!--[if IE 8]>
-    <html xmlns="http://www.w3.org/1999/xhtml" class="ie8" lang="en-US">
-  <![endif]-->
-  <!--[if !(IE 8) ]><!-->
-    <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
-  <!--<![endif]-->
-<head>	
-	<meta charset=utf-8>	
-	<meta name="author" content="{{site.author}}"/>
-	<meta name=description content="{{site.description}}">	
-	<meta name=viewport content="width=device-width, initial-scale=1">
-    <meta name="generator" content="{{ site.generator }}" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>{{ page.title }}</title>
-	<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="{{site.baseurl}}/feed.xml" />
-    <link rel="stylesheet" href="{{site.baseurl}}/assets/css/skeleton.css">
-    <link rel="stylesheet" src="https://necolas.github.io/normalize.css/8.0.0/normalize.css">
-    <link rel="stylesheet" href="{{site.baseurl}}/assets/css/custom.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,300,600">
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-</head>
+  {% include head.html %}
 <!--end header-->
 <body>	
 	<div class="container">
 		<div class="row">
 			<div class="nine columns">
 				{% for post in site.posts %}				
-			 	<h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-			 	{{ post.excerpt }}
-			 	<p><a href="{{ post.url }}">leer más.</a></p>
-			 	<hr/>			 
-			{% endfor %}					
-		</div>
-		<div class="three columns">
-			<h2>sidebar</h2>
-			<p>Lorem ipsum es el texto que se usa habitualmente en diseño gráfico en demostraciones de tipografías o de borradores de diseño para probar el diseño visual antes de insertar el texto final.</p>
+				<h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+				{{ post.excerpt }}
+				<a href="{{ post.url }}">leer más.</a>
+				<hr/>				
+				{% endfor %}			 					
+			</div>
+			<div class="three columns">
+				<h2>sidebar</h2>
+				<p>Lorem ipsum es el texto que se usa habitualmente en diseño gráfico en demostraciones de tipografías o de borradores de diseño para probar el diseño visual antes de insertar el texto final.</p>
+			</div>
 		</div>
 	</div>
-</div>
-<!--start footer-->	
-	<div class="container">
-		<div clas="row">
-			<div class="twelve columns">
-			<p>Copyright &copy; {{ site.time | date: '%Y' }} Valdemar Lozada</p>
-			<p>
-			<a href="https://github.com/lordvalor" target="_blank" rel="noopener nofollow" alt="Github">Github</a> |
-			<a href="https://twitter.com/lordvalor" target="_blank" rel="noopener nofollow" alt="twitter">Twitter</a> | 
-			<a href="https://linkedin.com/" target="_blank" rel="noopener nofollow" alt="Linkedin">Linkedin</a> |
-            <a href="{{site.baseurl}}/feed.xml" target="_blank" alt="rss">RSS</a>
-			</p>
-		</div>
-		</div>	 
-	</div> 
+	{% include footer.html %}
 </body>
 </html>

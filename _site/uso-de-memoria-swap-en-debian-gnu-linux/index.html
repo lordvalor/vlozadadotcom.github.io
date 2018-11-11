@@ -1,0 +1,102 @@
+	<!DOCTYPE html>
+<!--[if IE 8]>
+    <html xmlns="http://www.w3.org/1999/xhtml" class="ie8" lang="en-US">
+  <![endif]-->
+  <!--[if !(IE 8) ]><!-->
+  <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+  <!--<![endif]-->
+  <head>	
+   <meta charset=utf-8>	
+   <meta name="author" content="@lordvalor"/>
+   <meta name=description content="Actualmente, tenemos la posibilidad de configurar proporcionalmente el uso de la memoria swap en nuestros sistemas linux gracias al Kernel.¿Qué es la memoria...">	
+   <meta name=viewport content="width=device-width, initial-scale=1">	
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="generator" content="Jekyll - Github Pages" />
+   <title>¿Como Optimizar el Uso de Memoria Swap en debian GNU/linux?</title>
+   <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed.xml" />
+   <link rel="stylesheet" href="/assets/css/skeleton.css">
+   <link rel="stylesheet" src="https://necolas.github.io/normalize.css/8.0.0/normalize.css">
+   <link rel="stylesheet" href="/assets/css/custom.css">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,300,600">
+   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+   <script id="dsq-count-scr" src="//https-lordvalor-com.disqus.com/count.js" async></script>
+<!--end header-->
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="twelve columns">
+				<h1>¿Como Optimizar el Uso de Memoria Swap en debian GNU/linux? </h1>
+				<p>Publicado el Mar 27, 2018 | por @lordvalor | en  Debian </p>
+				<div >
+					<p>Actualmente, tenemos la posibilidad de configurar proporcionalmente el uso de la memoria <code class="highlighter-rouge">swap</code> en nuestros sistemas <a href="https://en.wikipedia.org/wiki/Linux">linux</a> gracias al <em>Kernel</em>.
+<!--more--></p>
+<h2 id="qué-es-la-memoria-swap">¿Qué es la memoria swap?</h2>
+
+<p>También la conocemos como memoria de intercambio y simplemente una partición en el disco duro, el cual su función es nada mas y nada menos que actuar en función de memoria ram virtual siempre y cuando se haya agotado la disponible en el sistema.</p>
+
+<p>El pequeño detalle con esto, es que cuando usamos <em>SWAP</em> en lugar de la memoria RAM nuestro sistema se, relentiza por esta razón debemos intentar usar la menor cantidad de swap posible.</p>
+
+<h2 id="mejorando-un-poco-el-uso-de-memoria-swap-en-debian-gnulinux">Mejorando un poco el Uso de Memoria Swap en debian GNU/linux.</h2>
+
+<p>En los sistemas actuales, a nivel de kernel tenemos la opción <strong>swappiness</strong> con el cual podremos asignar en un valor de 0 a 100, esto daría un indicativo en cuanto a la preferencia de la memoria swap respecto a la RAM</p>
+
+<p>Siempre que elegimos un numero mayor, habrá mas tendencia a utilizar la memoria swap. En cambio, un valor mas bajo tendrá mas preferencia por la memoria RAM, el valor por defecto de <code class="highlighter-rouge">swappiness</code> es de 60:</p>
+
+<p>Para cambiar esto valores debemos realizar lo siguiente:</p>
+
+<h2 id="verificamos-el-valor-actual">Verificamos el valor actual:</h2>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cat /proc/sys/vm/swappiness
+60
+</code></pre></div></div>
+<p>Si queremos cambiar en tiempo real, lo haríamos a través del uso del sysctl:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sysctl vm.swappiness=30
+</code></pre></div></div>
+<p>Sin embargo con este método, al realizar un reinicio perderemos dicho cambios, de modo que si queremos hacerlo permanente seria de la siguiente forma:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo vim /etc/sysctl.conf
+</code></pre></div></div>
+<p>entonces si ya existe la linea, la modificamos, de lo contrario agregamos lo siguiente:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vm.swappiness=30
+</code></pre></div></div>
+<p>El valor es conveniente según los requerimientos de cada sistema, en este caso es mejor ir probando diferentes valores hasta que consideres adecuado a tu rendimiento.</p>
+
+					<hr/>
+				</div>                          
+				<div >
+				 
+			<div id="disqus_thread"></div>
+		<script>
+
+	
+	(function() { // DON'T EDIT BELOW THIS LINE
+		var d = document, s = d.createElement('script');
+		s.src = 'https://https-lordvalor-com.disqus.com/embed.js';
+		s.setAttribute('data-timestamp', +new Date());
+		(d.head || d.body).appendChild(s);
+	})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+</div>
+<!-- comments-->
+</div>
+</div>
+</div>
+
+<!--start footer-->	
+<div class="container">
+	<div clas="row">
+		<div class="twelve columns">
+			<p>Copyright &copy; 2018 Valdemar Lozada</p>
+			<p>
+				<a href="https://github.com/lordvalor" target="_blank" rel="noopener nofollow" alt="Github">Github</a> |
+				<a href="https://twitter.com/lordvalor" target="_blank" rel="noopener nofollow" alt="twitter">Twitter</a> | 
+				<a href="https://linkedin.com/" target="_blank" rel="noopener nofollow" alt="Linkedin">Linkedin</a> |
+				<a href="/feed.xml" target="_blank" alt="rss">RSS</a>
+			</p>
+		</div>
+	</div>	 
+</div> 
+</body>
+</html>

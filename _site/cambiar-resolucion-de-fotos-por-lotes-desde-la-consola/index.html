@@ -1,0 +1,93 @@
+	<!DOCTYPE html>
+<!--[if IE 8]>
+    <html xmlns="http://www.w3.org/1999/xhtml" class="ie8" lang="en-US">
+  <![endif]-->
+  <!--[if !(IE 8) ]><!-->
+  <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+  <!--<![endif]-->
+  <head>	
+   <meta charset=utf-8>	
+   <meta name="author" content="@lordvalor"/>
+   <meta name=description content="Hace unos días tenia la tarea de subir ciertas fotografías tomadas con una cámara de 8MP a una pagina web, el problema realmente era que cada fotografías pes...">	
+   <meta name=viewport content="width=device-width, initial-scale=1">	
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="generator" content="Jekyll - Github Pages" />
+   <title>Cambiar resolución de fotos por lotes desde la consola.</title>
+   <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed.xml" />
+   <link rel="stylesheet" href="/assets/css/skeleton.css">
+   <link rel="stylesheet" src="https://necolas.github.io/normalize.css/8.0.0/normalize.css">
+   <link rel="stylesheet" href="/assets/css/custom.css">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,300,600">
+   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+   <script id="dsq-count-scr" src="//https-lordvalor-com.disqus.com/count.js" async></script>
+<!--end header-->
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="twelve columns">
+				<h1>Cambiar resolución de fotos por lotes desde la consola. </h1>
+				<p>Publicado el Jun 03, 2013 | por @lordvalor | en  Linux </p>
+				<div >
+					<p>Hace unos días tenia la tarea de subir ciertas fotografías tomadas con una cámara de 8MP a una pagina web, el problema realmente era que cada fotografías pesaba 2.3MB con una resolución de 3264×2448, algo que a mi parecer no es nada indicado para una galería fotográfica y mucho menos aún con la conexión que tenemos en el país.
+<!--more-->
+El asunto era cambiar o bajar dicho tamaño sin sacrificar la calidad de la fotografías y hacerlo a 28 imágenes, investigando un poco di con una forma bastante sencilla a través de la consola linux el único requerimiento para dicha tarea es tener <a href="https://www.imagemagick.org/script/index.php">imagemagick</a> instalado.</p>
+
+<h2 id="instalando-imagemagick-en-debian">Instalando imagemagick en debian</h2>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo apt-get install imagemagick
+</code></pre></div></div>
+
+<p>luego que ya está instalado vamos al directorio en donde están las fotografías que vamos trabajar.</p>
+
+<p><code class="highlighter-rouge">
+$ cd /home/ususario/imagenes/album
+</code></p>
+
+<p>y ejecutamos lo siguiente:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ for IMG in `ls *.jpg`; do convert -sample 20%X20% -quality 85 $IMG reducido-$IMG; done
+</code></pre></div></div>
+<p>el tiempo que tarda dependerá de la cantidad de fotos y el tamaño de cada una de ellas. El nombre reducido-$IMG seria el prefijo que se le asigna a la fotografía dimensionada, podemos usar el que veamos más conveniente</p>
+
+<p>también podemos hacerlo con otras extensiones como .png, otro detalle que debemos estar pendiente es que algunas cámaras colocan las extensiones con mayúsculas <code class="highlighter-rouge">.JPG</code> si es así, debemos cambiar dependiendo de nuestros caso. De igual forma podemos jugar con el tamaño, yo logre una buena imagen de una original de 2.3 mb (3264×2448) a una de 66,2kb (653×490).</p>
+
+<p>espero que les sirva de ayuda.</p>
+
+					<hr/>
+				</div>                          
+				<div >
+				 
+			<div id="disqus_thread"></div>
+		<script>
+
+	
+	(function() { // DON'T EDIT BELOW THIS LINE
+		var d = document, s = d.createElement('script');
+		s.src = 'https://https-lordvalor-com.disqus.com/embed.js';
+		s.setAttribute('data-timestamp', +new Date());
+		(d.head || d.body).appendChild(s);
+	})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+</div>
+<!-- comments-->
+</div>
+</div>
+</div>
+
+<!--start footer-->	
+<div class="container">
+	<div clas="row">
+		<div class="twelve columns">
+			<p>Copyright &copy; 2018 Valdemar Lozada</p>
+			<p>
+				<a href="https://github.com/lordvalor" target="_blank" rel="noopener nofollow" alt="Github">Github</a> |
+				<a href="https://twitter.com/lordvalor" target="_blank" rel="noopener nofollow" alt="twitter">Twitter</a> | 
+				<a href="https://linkedin.com/" target="_blank" rel="noopener nofollow" alt="Linkedin">Linkedin</a> |
+				<a href="/feed.xml" target="_blank" alt="rss">RSS</a>
+			</p>
+		</div>
+	</div>	 
+</div> 
+</body>
+</html>

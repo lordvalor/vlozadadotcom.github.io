@@ -6,17 +6,23 @@ author_email: vlozada@protonmail.com
 twitter_username: lordvalor
 github_username: lordvalor
 
-permalink: /:title
+paginate: 5
+permalink: /:title/
 baseurl: ""
 url: https://lordvalor.com
 comments: true
-
 timezone: 'America/Lima'
 highlighter: 'rouge'
 plugins:
 - jekyll-feed
+- jekyll-paginate
+- jekyll-sitemap
+- jekyll-seo-tag
+
 generator: 'Jekyll - Github Pages'
 exclude:
 - CNAME
 - .gitignore
 - README.md
+- Gemfile
+- Gemfile.lock

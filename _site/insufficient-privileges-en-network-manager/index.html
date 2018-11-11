@@ -1,0 +1,91 @@
+	<!DOCTYPE html>
+<!--[if IE 8]>
+    <html xmlns="http://www.w3.org/1999/xhtml" class="ie8" lang="en-US">
+  <![endif]-->
+  <!--[if !(IE 8) ]><!-->
+  <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+  <!--<![endif]-->
+  <head>	
+   <meta charset=utf-8>	
+   <meta name="author" content="@lordvalor"/>
+   <meta name=description content="Al instalar Debian en una Acer Aspire One d-250 Teniendo razones obvias de rendimiento me decido por Openbox como entorno de escritorio.Luego de mucho tiempo...">	
+   <meta name=viewport content="width=device-width, initial-scale=1">	
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="generator" content="Jekyll - Github Pages" />
+   <title>Solucionando problema (32) insufficient privileges en network-manager</title>
+   <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed.xml" />
+   <link rel="stylesheet" href="/assets/css/skeleton.css">
+   <link rel="stylesheet" src="https://necolas.github.io/normalize.css/8.0.0/normalize.css">
+   <link rel="stylesheet" href="/assets/css/custom.css">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,300,600">
+   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+   <script id="dsq-count-scr" src="//https-lordvalor-com.disqus.com/count.js" async></script>
+<!--end header-->
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="twelve columns">
+				<h1>Solucionando problema (32) insufficient privileges en network-manager </h1>
+				<p>Publicado el Nov 20, 2012 | por lordvalor | en  Debian,Linux </p>
+				<div >
+					<p>Al instalar Debian en una <a href="https://en.wikipedia.org/wiki/Acer_Aspire_One">Acer Aspire One d-250</a> Teniendo razones obvias de rendimiento me decido por <strong>Openbox</strong> como entorno de escritorio.
+<!--more-->
+Luego de mucho tiempo usando como gestor de interfaces de redes <strong>WICD</strong> decidí que era hora de darle una oportunidad al amado por mucho y odiado por algunos <strong>Network-Manager.</strong></p>
+
+<p>Posterior a la configuración de <strong>tint2,</strong> para poder hacer que network-manager se muestre en el systemtray días después tengo la oportunidad de probar mi conexión wifi pero resulta que al tratar de conectarme, me tope con un fabuloso aviso diciéndome “Failed to add new connection: (32) insufficient privileges”.</p>
+
+<p>Entonces procedo a investigar cual es la causa de este inconveniente.</p>
+
+<p>y simplemente es que como yo siempre instalo Debian como sistema base “Netinstall” y luego voy instalando y configurando lo que necesito, encontré la solución y realmente es sencilla.</p>
+
+<h2 id="solucionando-problema-32-insufficient-privileges-en-en-network-manager">Solucionando problema (32) insufficient privileges En en network-manager.</h2>
+
+<p>Primero, debemos agregar nuestro usuario regular al group <code class="highlighter-rouge">netdev</code> de la siguiente manera:</p>
+
+<p><code class="highlighter-rouge">adduser tusuario netdev</code></p>
+
+<p>Posteriormente nos vamos al directorio.</p>
+
+<p><code class="highlighter-rouge">cd /etc/polkit-1/localauthority/50-local.d/</code>
+allí creamos un archivo con el siguiente nombre:
+<code class="highlighter-rouge">org.freedesktop.NetworkManager.pkla</code>
+Luego y con el editor de su preferencia le agregamos lo siguiente.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Identity=unix-group:netdev
+Action=org.freedesktop.NetworkManager.*
+ResultAny=yes
+ResultInactive=no
+ResultActive=yes
+</code></pre></div></div>
+<p>Guardamos</p>
+
+<p>Reiniciamos el Network-manager</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># /etc/init.d/network-manager restart
+</code></pre></div></div>
+<p>Listo ya deberíamos poder acceder a nuestra conexión wifi desde el applet del network-manager.</p>
+
+					<hr/>
+				</div>                          
+				<div >
+				
+</div>
+<!-- comments-->
+</div>
+</div>
+</div>
+
+<!--start footer-->	
+<div class="container">
+	<div clas="row">
+		<div class="twelve columns">
+			<p>Copyright &copy; 2018 Valdemar Lozada</p>
+			<p>
+				<a href="https://github.com/lordvalor" target="_blank" rel="noopener nofollow" alt="Github">Github</a> |
+				<a href="https://twitter.com/lordvalor" target="_blank" rel="noopener nofollow" alt="twitter">Twitter</a> | 
+				<a href="https://linkedin.com/" target="_blank" rel="noopener nofollow" alt="Linkedin">Linkedin</a> |
+				<a href="/feed.xml" target="_blank" alt="rss">RSS</a>
+			</p>
+		</div>
+	</div>	 
+</div> 
+</body>
+</html>
