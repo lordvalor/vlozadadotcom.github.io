@@ -43,6 +43,9 @@
 <loc>http://localhost:4000/</loc>
 </url>
 <url>
+<loc>http://localhost:4000/sobre-mi/</loc>
+</url>
+<url>
 <loc>http://localhost:4000/page2/</loc>
 </url>
 </urlset>

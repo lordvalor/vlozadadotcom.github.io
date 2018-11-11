@@ -6,10 +6,9 @@ categories: Prestashop
 comments: true
 ---
 Instalación Básica de [Prestashop 1.7](href=https://www.prestashop.com/en) en una instancia [AWS](https://aws.amazon.com/) ec2 en ubuntu
-<!--more-->
+
 > Instalación paso a paso en _EC2-AWS_ on _ubuntu-server_
 
-<!--more-->
 Herramientas:
 
 - wget

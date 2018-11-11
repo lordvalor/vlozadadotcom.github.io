@@ -13,3 +13,24 @@ a{
 	color: #666;
 	text-decoration: none;
 }
+.owner{
+	padding: 5px;
+}
+.navbar ul{
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #fff;
+    margin-top: 0;
+}
+.navbar li{
+float: left;
+}
+.navbar a{
+	 display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}

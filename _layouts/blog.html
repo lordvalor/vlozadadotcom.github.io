@@ -1,7 +1,8 @@
 <!DOCTYPE html>
   {% include head.html %}
 <!--end header-->
-<body>	
+<body>
+{% include navbar.html %}	
 	<div class="container">
 		<div class="row">
 			<div class="nine columns">
@@ -13,8 +14,7 @@
 				{% endfor %}			 					
 			</div>
 			<div class="three columns">
-				<h2>sidebar</h2>
-				<p>Lorem ipsum es el texto que se usa habitualmente en diseño gráfico en demostraciones de tipografías o de borradores de diseño para probar el diseño visual antes de insertar el texto final.</p>
+				{% include sidebar.html%}
 			</div>
 		</div>
 	</div>
