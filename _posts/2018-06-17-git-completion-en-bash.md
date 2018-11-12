@@ -6,7 +6,7 @@ categories: Git
 comments: true
 ---
 Si eres usuario bash puedes acceder algunas funciones de tu shell para potenciar tu experiencia con git y hacerlo más amigable. Git Realmente envía varios complementos para varios shell pero no están activados por defecto. Unas de las características de GIT es su auto completado, por ejemplo si escribimos `git chec` y tabulamos dos veces, vera que auto completa a `git checkout` si en su caso no lo hace, solamente deberá instalarlo de la siguiente manera: 
-<!--more-->
+
 ```
 $ sudo apt-get install bash-completion
 ```

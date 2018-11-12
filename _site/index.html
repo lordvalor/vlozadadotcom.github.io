@@ -45,43 +45,7 @@
 				<hr/>				
 								
 				<h3><a href="/git-completion-en-bash/">git-completion en bash</a></h3>
-				<p>Si eres usuario bash puedes acceder algunas funciones de tu <abbr title="A Unix shell is a command-line interpreter or shell that provides a traditional Unix-like command line user interface.">shell</abbr> para potenciar tu experiencia con git y hacerlo más amigable. Git Realmente envía varios complementos para varios <abbr title="A Unix shell is a command-line interpreter or shell that provides a traditional Unix-like command line user interface.">shell</abbr> pero no están activados por defecto. Unas de las características de <abbr title="Git is a version control system for tracking changes in computer files and coordinating work on those files among multiple people.">GIT</abbr> es su auto completado, por ejemplo si escribimos <code class="highlighter-rouge">git chec</code> y tabulamos dos veces, vera que auto completa a <code class="highlighter-rouge">git checkout</code> si en su caso no lo hace, solamente deberá instalarlo de la siguiente manera: 
-<!--more--></p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo apt-get install bash-completion
-</code></pre></div></div>
-<p>Luego de instalar, veremos que ya obtendremos la característica de auto completado.</p>
-
-<h2 id="personalizando-mensaje">Personalizando mensaje.</h2>
-
-<p>También podremos personalizar el mensaje sobre la información del repositorio git. Esto es realmente un proceso bastante simple (debería serlo).
-Normalmente se desea ver el directorio actual en done nos encontramos trabajando y el estado del directorio.</p>
-
-<h2 id="configuración-de-git-completion-en-bash">Configuración de Git-completion en bash.</h2>
-
-<p>En este caso debemos, con nuestro editor de (texto preferido) abrir el archivo <code class="highlighter-rouge">.bashrc</code> y agregar al final del archivo lo siguiente:</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Git Bash Completion and folder status
-
-export PS1='\u@\h:\w\[\033[32m\]$(__git_ps1 " (%s)")\[\033[0m\]$ '
-
-export GIT_PS1_SHOWDIRTYSTATE=true
-export GIT_PS1_SHOWSTASHSTATE=true
-export GIT_PS1_SHOWUNTRACKEDFILES=true
-export GIT_PS1_SHOWUPSTREAM="auto"
-
-</code></pre></div></div>
-
-<p>El <code class="highlighter-rouge">\w</code> significa imprimir el directorio de trabajo actual, la parte <code class="highlighter-rouge">\$</code> imprime el <code class="highlighter-rouge">$</code> del prompt, y <code class="highlighter-rouge">__git_ps1 "(% s)"</code> llama a la función provista por git-prompt.sh con un argumento de formateo. Ahora nuestro prompt bash se verá así cuando esté en cualquier lugar dentro de un proyecto controlado por <strong>Git</strong>:</p>
-
-<p><strong>Visualizando <code class="highlighter-rouge">~/projects/cv (master=)$</code></strong></p>
-
-<p>Ahora guardamos los cambios y luego debemos cerrar y volver abrir nuestro terminal para que funcione.</p>
-
-<p>ahora veremos claramente que nos muestra el directorio donde estamos y el <code class="highlighter-rouge">branche</code> en el que nos encontramos trabajando.</p>
-
-<p><strong>Bash completion</strong> vienen con documentación útil; Eche un vistazo al contenido de git-completion.bash y git-prompt.sh para más información.</p>
-
-<p><a href="https://www.git-scm.com/book/en/v2/Appendix-A%3A-Git-in-Other-Environments-Git-in-Bash">Referencia: git-scm</a></p>
+				<p>Si eres usuario bash puedes acceder algunas funciones de tu shell para potenciar tu experiencia con git y hacerlo más amigable. Git Realmente envía varios complementos para varios shell pero no están activados por defecto. Unas de las características de GIT es su auto completado, por ejemplo si escribimos <code class="highlighter-rouge">git chec</code> y tabulamos dos veces, vera que auto completa a <code class="highlighter-rouge">git checkout</code> si en su caso no lo hace, solamente deberá instalarlo de la siguiente manera:</p>
 
 
 				<a href="/git-completion-en-bash/">leer más.</a>
