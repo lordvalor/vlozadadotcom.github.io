@@ -12,17 +12,18 @@
    <meta name=viewport content="width=device-width, initial-scale=1">	
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="generator" content="Jekyll - Github Pages" />
-   <title>Home</title>
+   <title>lordvalor@blog:~$</title>
    <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed.xml" />
    <link rel="stylesheet" href="/assets/css/skeleton.css">
    <link rel="stylesheet" src="https://necolas.github.io/normalize.css/8.0.0/normalize.css">
    <link rel="stylesheet" href="/assets/css/custom.css">
-   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,300,600">
+<!--   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,300,600">-->
    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
    <script id="dsq-count-scr" src="//https-lordvalor-com.disqus.com/count.js" async></script>
  </head>
 <!--end header-->
 <body>
+<div class="container">
 <div class="navbar">
 <nav>
 	<ul><li><a href="/" title="home" class="owner">@lordvalor</a></li>
@@ -32,7 +33,7 @@
 	</ul>
 </nav>	
 </div>
-	
+</div>	
 	<div class="container">
 		<div class="row">
 			<div class="nine columns">
@@ -52,133 +53,15 @@
 				<hr/>				
 								
 				<h3><a href="/instalar-virtualbox-en-debian/">Instalar VirtualBox en Debian</a></h3>
-				<p>Primero que nada, es importante saber que <a href="https://www.virtualbox.org"><abbr title="VirtualBox is a general-purpose full virtualizer for x86 hardware, targeted at server, desktop and embedded use.">VirtualBox</abbr></a> es una herramienta de <abbr title="In computing, virtualization refers to the act of creating a virtual version of something, including virtual computer hardware platforms, storage devices, and computer network resources.">Virtualización</abbr> creado por <abbr title="Oracle Corporation is an American multinational computer technology corporation, headquartered in Redwood Shores, California.">Oracle</abbr>. Cuando hablamos de <strong><abbr title="In computing, virtualization refers to the act of creating a virtual version of something, including virtual computer hardware platforms, storage devices, and computer network resources.">Virtualización</abbr></strong>, nos referimos a que podremos realizar una instalación de otros sistemas operativos (Windows, MacOS, BSD, Linux) sobre nuestro sistema anfitrion, o cualquiera que sea el sistema operativo principal que tengamos instalado en nuestro computador.
-<!--more-->
-Se le hace llamar máquina virtual debido a que básicamente es una computadora instalada dentro de nuestra computadora pero que realmente no interactua con nuestro equipo como lo haría nuestro sistema operativo principal.</p>
-
-<p>Quiza, en ocasiones habras visto que algunas personas llegan a tener en su computador dos o más sistemas operativos instalados, lo mas común de estos casos seria ver linux y windows compartiendo el mismo disco duro pero en particiones diferentes, a eso le llamamos <strong>dualboot</strong>.</p>
-
-<p>El dualboot es comunmente usado por personas que en algunos casos utilizan linux como sistemas operativo pricipal, pero siguen dependiendo de alguna manera que alguna aplicacion el cual exclusivamente debe ser instalada en windows, normalmente cuando son creadas en lenguajes como Visual foxpro, vbasic, .net o cualquiera que de alguna manera este muy vinculada al sistema operativo. Otro caso comun es de los gamers que necesitan correr sus juegos para aprovechar al máximo los gráficos entre otras caracteristicas de sus juegos.</p>
-
-<p>Sin embargo existen otros casos un poco menos “exigentes” en los que no tenemos la necesidad de compartir nuestro disco duro con un <code class="highlighter-rouge">SO</code> que no queramos usar, o que solamente usaremos para cosas puntuales o especeficas como: probar herramientas, simular equipos en red, configuraciones bases y más. todo esto lo podremos hacer en una maquina virtual [VM]. y de esta manera no tendremos que estar reiniciando nuestro equipo para cambiar de sistemas operativos.</p>
-
-<h2 id="instalando-virtualbox">Instalando <abbr title="VirtualBox is a general-purpose full virtualizer for x86 hardware, targeted at server, desktop and embedded use.">VirtualBox</abbr></h2>
-<p>En caso de <strong><abbr title="Debian is a Unix-like computer operating system that is composed entirely of free software, and packaged by a group of individuals participating in the Debian Project.">Debian</abbr></strong> y derivados, lo podremos encontrar en repositorios oficiales, sin embargo yo recomeindo utilizar los repositorios de la pagina para obtener la última version estable del <strong><abbr title="VirtualBox is a general-purpose full virtualizer for x86 hardware, targeted at server, desktop and embedded use.">vbox</abbr></strong></p>
-
-<h2 id="editando-nuestros-sourcelist">Editando nuestros source.list</h2>
-
-<p>En este paso, debemos saber cual es la versión que estamos utilizando, en mi caso utilizo <abbr title="Debian is a Unix-like computer operating system that is composed entirely of free software, and packaged by a group of individuals participating in the Debian Project.">Debian</abbr> y usaré <strong>stretch</strong> y que colocaremos de la siguiente manera:</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>deb https://download.virtualbox.org/virtualbox/debian contrib
-</code></pre></div></div>
-<p>En donde <code class="highlighter-rouge">mydist</code> será la versión que usaremos. Luego de comprendido esto, procemos a editar nuestro archivo.</p>
-
-<p><code class="highlighter-rouge">$ sudo vim /etc/apt/source.list</code></p>
-
-<p>y agregamos el repositorio</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>deb https://download.virtualbox.org/virtualbox/debian stretch contrib
-</code></pre></div></div>
-
-<p>Ahora, debemos agregar los <em>public key</em> para realizar una descarga segura desde los servidores de <abbr title="Oracle Corporation is an American multinational computer technology corporation, headquartered in Redwood Shores, California.">Oracle</abbr>, Lo haremos de la siguiente manera.</p>
-
-<p>Descargamos el archivo</p>
-
-<p><code class="highlighter-rouge">$ wget https://www.virtualbox.org/download/oracle_vbox_2016.asc</code></p>
-
-<p>y si todo sale bien deberia mostrar una salida como la siguiente:</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>--2018-05-13 18:06:48-- https://www.virtualbox.org/download/oracle_vbox_2016.asc
-Resolviendo www.virtualbox.org (www.virtualbox.org)... 137.254.60.32
-Conectando con www.virtualbox.org (www.virtualbox.org)[137.254.60.32]:443... conectado.
-Petición HTTP enviada, esperando respuesta... 200 OK
-Longitud: 3157 (3,1K) [text/plain]
-Grabando a: "oracle_vbox_2016.asc"
-
-oracle_vbox_2016.asc 100%[=====================================================================================&gt;] 3,08K 19,8KB/s en 0,2s
-
-2018-05-13 18:06:49 (19,8 KB/s) - "oracle_vbox_2016.asc" guardado [3157/3157]
-</code></pre></div></div>
-<p>Luego de esto procedemos a agregar</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-key add oracle_vbox_2016.asc
-</code></pre></div></div>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>OK
-</code></pre></div></div>
-
-<p>Si queremos realizar todo desde un solo comando para decargar y agregar, se hace de la siguiente manera</p>
-
-<p><code class="highlighter-rouge">wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -</code></p>
-
-<p>la huella de la llave deberia ser la siguiente</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>B9F8 D658 297A F3EF C18D 5CDF A2F6 83C5 2980 AECF
-Oracle Corporation (VirtualBox archive signing key) &lt;info@virtualbox.org&gt;&lt;/info@virtualbox.org&gt;
-</code></pre></div></div>
-
-<h2 id="procedemos-a-instalar">Procedemos a instalar</h2>
-
-<p><code class="highlighter-rouge">$ sudo apt-get update &amp;amp;&amp;amp; sudo apt-get install virtualbox-5.2</code></p>
-
-<p>Esto hará que nuestro sistema de actualice con la ultima version de <abbr title="VirtualBox is a general-purpose full virtualizer for x86 hardware, targeted at server, desktop and embedded use.">vbox</abbr> y posteriormente comienza la instalación.</p>
-
-<h2 id="2da-modalidad-descargando-el-deb">2da Modalidad, Descargando el .deb</h2>
-<p>Antes de proceder a realizar la descarga, debemos estar seguro la version de nuestro sistema operativo sea 32 o 64 bit es decir que: <code class="highlighter-rouge">(32=i386)</code> y <code class="highlighter-rouge">(64=AMD64)</code>
-lueg de identificado esto, procedemos a realizar la descarga desde la pagina de <a href="https://www.virtualbox.org/wiki/Linux_Downloads"><abbr title="VirtualBox is a general-purpose full virtualizer for x86 hardware, targeted at server, desktop and embedded use.">VirtualBox</abbr></a></p>
-
-<p>Luego de haber cultimando la descargar del archivo .deb procemos a la instalacion de la siguiente manera.</p>
-
-<p><code class="highlighter-rouge">$ sudo dpkg -i ~/Descargas/virtualbox-5.2_5.2.12-122591~Debian~stretch_amd64.deb</code></p>
-
-<p>y si todo ha salido como deberia, ya tenemos virtualbox instalado.</p>
-
-<p><abbr title="VirtualBox is a general-purpose full virtualizer for x86 hardware, targeted at server, desktop and embedded use.">VirtualBox</abbr> en <abbr title="Debian is a Unix-like computer operating system that is composed entirely of free software, and packaged by a group of individuals participating in the Debian Project.">Debian</abbr> Buster GNU/Linux</p>
-
-<p>luego de esto, debemos agregar nuestro usuario al grupo <strong>vboxusers</strong> de la siguiente manera:</p>
-
-<p><code class="highlighter-rouge">$ sudo usermod -G vboxusers -a usuario</code>
-Donde usuario seria el nombre de usuario de nuestro equipo con el que estamos trabajando.</p>
-
-<p>Otra manera de hacerlo seria la siguiente:
-<code class="highlighter-rouge">$ sudo usermod -G vboxusers -a $USER</code></p>
-
-<p>Espero que les sirva, Cualquier detalle no dudes en dejar sus comentários.</p>
+				<p>Primero que nada, es importante saber que <a href="https://www.virtualbox.org">VirtualBox</a> es una herramienta de Virtualización creado por Oracle. Cuando hablamos de <strong>Virtualización</strong>, nos referimos a que podremos realizar una instalación de otros sistemas operativos (Windows, MacOS, BSD, Linux) sobre nuestro sistema anfitrion, o cualquiera que sea el sistema operativo principal que tengamos instalado en nuestro computador.</p>
 
 
 				<a href="/instalar-virtualbox-en-debian/">leer más.</a>
 				<hr/>				
 								
 				<h3><a href="/uso-de-memoria-swap-en-debian-gnu-linux/">¿Como Optimizar el Uso de Memoria Swap en debian GNU/linux?</a></h3>
-				<p>Actualmente, tenemos la posibilidad de configurar proporcionalmente el uso de la memoria <code class="highlighter-rouge">swap</code> en nuestros sistemas <a href="https://en.wikipedia.org/wiki/Linux">linux</a> gracias al <em>Kernel</em>.
-<!--more--></p>
-<h2 id="qué-es-la-memoria-swap">¿Qué es la memoria swap?</h2>
+				<p>Actualmente, tenemos la posibilidad de configurar proporcionalmente el uso de la memoria <code class="highlighter-rouge">swap</code> en nuestros sistemas <a href="https://en.wikipedia.org/wiki/Linux">linux</a> gracias al <em>Kernel</em>.</p>
 
-<p>También la conocemos como memoria de intercambio y simplemente una partición en el disco duro, el cual su función es nada mas y nada menos que actuar en función de memoria ram virtual siempre y cuando se haya agotado la disponible en el sistema.</p>
-
-<p>El pequeño detalle con esto, es que cuando usamos <em>SWAP</em> en lugar de la memoria RAM nuestro sistema se, relentiza por esta razón debemos intentar usar la menor cantidad de swap posible.</p>
-
-<h2 id="mejorando-un-poco-el-uso-de-memoria-swap-en-debian-gnulinux">Mejorando un poco el Uso de Memoria Swap en debian GNU/linux.</h2>
-
-<p>En los sistemas actuales, a nivel de kernel tenemos la opción <strong>swappiness</strong> con el cual podremos asignar en un valor de 0 a 100, esto daría un indicativo en cuanto a la preferencia de la memoria swap respecto a la RAM</p>
-
-<p>Siempre que elegimos un numero mayor, habrá mas tendencia a utilizar la memoria swap. En cambio, un valor mas bajo tendrá mas preferencia por la memoria RAM, el valor por defecto de <code class="highlighter-rouge">swappiness</code> es de 60:</p>
-
-<p>Para cambiar esto valores debemos realizar lo siguiente:</p>
-
-<h2 id="verificamos-el-valor-actual">Verificamos el valor actual:</h2>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cat /proc/sys/vm/swappiness
-60
-</code></pre></div></div>
-<p>Si queremos cambiar en tiempo real, lo haríamos a través del uso del sysctl:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sysctl vm.swappiness=30
-</code></pre></div></div>
-<p>Sin embargo con este método, al realizar un reinicio perderemos dicho cambios, de modo que si queremos hacerlo permanente seria de la siguiente forma:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo vim /etc/sysctl.conf
-</code></pre></div></div>
-<p>entonces si ya existe la linea, la modificamos, de lo contrario agregamos lo siguiente:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vm.swappiness=30
-</code></pre></div></div>
-<p>El valor es conveniente según los requerimientos de cada sistema, en este caso es mejor ir probando diferentes valores hasta que consideres adecuado a tu rendimiento.</p>
 
 				<a href="/uso-de-memoria-swap-en-debian-gnu-linux/">leer más.</a>
 				<hr/>				
@@ -190,125 +73,23 @@ Donde usuario seria el nombre de usuario de nuestro equipo con el que estamos tr
 				<a href="/instalacion-basica-de-prestashop-1-7/">leer más.</a>
 				<hr/>				
 								
-				<h3><a href="/cambio-huso-horario-venezuela-2016-debian-jessie-2/">Cambio huso horario Venezuela 2016 Debian jessie</a></h3>
-				<p>Como ya todos sabemos, a partir de este primero de mayo 2016, entró en vigencia nuestro nuevo <del>antiguo</del> huso horario, el cual pasa a ser UTC -4:30 a -4:00 ofreciendo una diferencia horaria de +30min.
-<!--more-->
-En pocas palabras, a partir de este 01-05-16 a las 2:30am debemos actualizar de manera manual o automática nuestros dispositivos, adelantándolo media hora.</p>
+				<h3><a href="/cambio-huso-horario-venezuela-2016-debian-jessie/">Cambio huso horario Venezuela 2016 Debian jessie</a></h3>
+				<p>Como ya todos sabemos, a partir de este primero de mayo 2016, entró en vigencia nuestro nuevo <del>antiguo</del> huso horario, el cual pasa a ser UTC -4:30 a -4:00 ofreciendo una diferencia horaria de +30min.</p>
 
-<h2 id="tzdata-en-debian-estable">tzdata en debian estable.</h2>
 
-<p>Para los que usamos Debian sea en su computador personal o en los servidores, la versión estable. Ya existe la actualización del paquete <a href="https://packages.debian.org/search?keywords=tzdata&amp;searchon=names&amp;suite=all§ion=all">tzdata</a></p>
-
-<h2 id="descarga">Descarga</h2>
-
-<p>Lo primero que debemos hacer es descargar el paquete tzdata</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># wget -c http://ftp.us.debian.org/debian/pool/main/t/tzdata/tzdata_2016d-0+deb8u1_all.deb
-</code></pre></div></div>
-<h2 id="instalación">Instalación.</h2>
-
-<p>luego procedemos a instalar de la siguiente manera:</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dpkg -i tzdata_2016d-2_all.deb
-</code></pre></div></div>
-<p>luego de ser instado, verificamos los cambios.</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># zdump -v /etc/localtime
-</code></pre></div></div>
-<p>y deberíamos tener una salida como la siguiente.</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/etc/localtime  -9223372036854689408 = NULL
-/etc/localtime  Wed Jan  1 04:27:43 1890 UT = Tue Dec 31 23:59:59 1889 LMT isdst=0 gmtoff=-16064
-/etc/localtime  Wed Jan  1 04:27:44 1890 UT = Wed Jan  1 00:00:04 1890 CMT isdst=0 gmtoff=-16060
-/etc/localtime  Mon Feb 12 04:27:39 1912 UT = Sun Feb 11 23:59:59 1912 CMT isdst=0 gmtoff=-16060
-/etc/localtime  Mon Feb 12 04:27:40 1912 UT = Sun Feb 11 23:57:40 1912 VET isdst=0 gmtoff=-16200
-/etc/localtime  Fri Jan  1 04:29:59 1965 UT = Thu Dec 31 23:59:59 1964 VET isdst=0 gmtoff=-16200
-/etc/localtime  Fri Jan  1 04:30:00 1965 UT = Fri Jan  1 00:30:00 1965 VET isdst=0 gmtoff=-14400
-/etc/localtime  Sun Dec  9 06:59:59 2007 UT = Sun Dec  9 02:59:59 2007 VET isdst=0 gmtoff=-14400
-/etc/localtime  Sun Dec  9 07:00:00 2007 UT = Sun Dec  9 02:30:00 2007 VET isdst=0 gmtoff=-16200
-/etc/localtime  Sun May  1 06:59:59 2016 UT = Sun May  1 02:29:59 2016 VET isdst=0 gmtoff=-16200
-/etc/localtime  Sun May  1 07:00:00 2016 UT = Sun May  1 03:00:00 2016 VET isdst=0 gmtoff=-14400
-/etc/localtime  9223372036854689407 = NULL
-/etc/localtime  9223372036854775807 = NULL
-</code></pre></div></div>
-<blockquote>
-  <p>Verificamos las dos ultimas lineas que nos muestran los cambios referentes al 01/05/16 que nos indica el incremento de los 30min, la nueva antigua hora local</p>
-</blockquote>
-
-<h2 id="cambiando-hora-al-hardware">Cambiando hora al hardware</h2>
-
-<p>Para transferir los cambios al la hora de la tarjeta madre, lo hacemos de la siguiente manera:</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># hwclock --systohc --utc
-</code></pre></div></div>
-
-<blockquote>
-  <p>systohc Colocará la nueva hora al reloj del sistema</p>
-</blockquote>
-
-<p>nuevamente Verificamos los cambios de la siguiente manera:</p>
-
-<p><code class="highlighter-rouge"># timedatectl status</code></p>
-
-<p>y nos devolverá algo como esto:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  Universal time: mar 2016-05-03 19:13:41 UTC
-        RTC time: mar 2016-05-03 19:13:40
-       Time zone: America/Caracas (VET, -0400)
-     NTP enabled: no
-NTP synchronized: yes  
- RTC in local TZ: no
-      DST active: n/a
-</code></pre></div></div>
-<p>Ya, de este modo tendremos nuestro servidor con debian estable actualizado a los nuevos cambios horarios del país.</p>
-
-<p>Espero haberles que ayudado.</p>
-
-<p>Fuente: <a href="https://juantrucupei.wordpress.com/2016/04/25/cambio-huso-horario-venezuela-2016/">juantrucupei</a></p>
-
-				<a href="/cambio-huso-horario-venezuela-2016-debian-jessie-2/">leer más.</a>
+				<a href="/cambio-huso-horario-venezuela-2016-debian-jessie/">leer más.</a>
 				<hr/>				
 								
 				<h3><a href="/cambiar-resolucion-de-fotos-por-lotes-desde-la-consola/">Cambiar resolución de fotos por lotes desde la consola.</a></h3>
-				<p>Hace unos días tenia la tarea de subir ciertas fotografías tomadas con una cámara de 8MP a una pagina web, el problema realmente era que cada fotografías pesaba 2.3MB con una resolución de 3264×2448, algo que a mi parecer no es nada indicado para una galería fotográfica y mucho menos aún con la conexión que tenemos en el país.
-<!--more-->
-El asunto era cambiar o bajar dicho tamaño sin sacrificar la calidad de la fotografías y hacerlo a 28 imágenes, investigando un poco di con una forma bastante sencilla a través de la consola linux el único requerimiento para dicha tarea es tener <a href="https://www.imagemagick.org/script/index.php">imagemagick</a> instalado.</p>
+				<p>Hace unos días tenia la tarea de subir ciertas fotografías tomadas con una cámara de 8MP a una pagina web, el problema realmente era que cada fotografías pesaba 2.3MB con una resolución de 3264×2448, algo que a mi parecer no es nada indicado para una galería fotográfica y mucho menos aún con la conexión que tenemos en el país.</p>
 
 
 				<a href="/cambiar-resolucion-de-fotos-por-lotes-desde-la-consola/">leer más.</a>
 				<hr/>				
 								
 				<h3><a href="/insufficient-privileges-en-network-manager/">Solucionando problema (32) insufficient privileges en network-manager</a></h3>
-				<p>Al instalar Debian en una <a href="https://en.wikipedia.org/wiki/Acer_Aspire_One">Acer Aspire One d-250</a> Teniendo razones obvias de rendimiento me decido por <strong>Openbox</strong> como entorno de escritorio.
-<!--more-->
-Luego de mucho tiempo usando como gestor de interfaces de redes <strong>WICD</strong> decidí que era hora de darle una oportunidad al amado por mucho y odiado por algunos <strong>Network-Manager.</strong></p>
+				<p>Al instalar Debian en una <a href="https://en.wikipedia.org/wiki/Acer_Aspire_One">Acer Aspire One d-250</a> Teniendo razones obvias de rendimiento me decido por <strong>Openbox</strong> como entorno de escritorio.</p>
 
-<p>Posterior a la configuración de <strong>tint2,</strong> para poder hacer que network-manager se muestre en el systemtray días después tengo la oportunidad de probar mi conexión wifi pero resulta que al tratar de conectarme, me tope con un fabuloso aviso diciéndome “Failed to add new connection: (32) insufficient privileges”.</p>
-
-<p>Entonces procedo a investigar cual es la causa de este inconveniente.</p>
-
-<p>y simplemente es que como yo siempre instalo Debian como sistema base “Netinstall” y luego voy instalando y configurando lo que necesito, encontré la solución y realmente es sencilla.</p>
-
-<h2 id="solucionando-problema-32-insufficient-privileges-en-en-network-manager">Solucionando problema (32) insufficient privileges En en network-manager.</h2>
-
-<p>Primero, debemos agregar nuestro usuario regular al group <code class="highlighter-rouge">netdev</code> de la siguiente manera:</p>
-
-<p><code class="highlighter-rouge">adduser tusuario netdev</code></p>
-
-<p>Posteriormente nos vamos al directorio.</p>
-
-<p><code class="highlighter-rouge">cd /etc/polkit-1/localauthority/50-local.d/</code>
-allí creamos un archivo con el siguiente nombre:
-<code class="highlighter-rouge">org.freedesktop.NetworkManager.pkla</code>
-Luego y con el editor de su preferencia le agregamos lo siguiente.</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Identity=unix-group:netdev
-Action=org.freedesktop.NetworkManager.*
-ResultAny=yes
-ResultInactive=no
-ResultActive=yes
-</code></pre></div></div>
-<p>Guardamos</p>
-
-<p>Reiniciamos el Network-manager</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># /etc/init.d/network-manager restart
-</code></pre></div></div>
-<p>Listo ya deberíamos poder acceder a nuestra conexión wifi desde el applet del network-manager.</p>
 
 				<a href="/insufficient-privileges-en-network-manager/">leer más.</a>
 				<hr/>				
@@ -317,97 +98,52 @@ ResultActive=yes
 				<p>Este procedimiento es compatible con las tarjetas
 <strong>En Kernel 3.2.0-2-686-pae</strong></p>
 
-<p><a href="https://www.nvidia.es/page/home.html">GeForce</a> 9M series:
-<!--more--></p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>9800M GTX, 9800M GTS, 9800M GT, 9800M GS, 9700M GTS, 9700M GT, 9650M GT, 9650M GS, 9600M GT, 9600M GS, 9500M GS, 9500M G, 9400M G, 9400M, 9300M GS, 9300M G, 9200M GS, 9100M G
-</code></pre></div></div>
-
-<p>Si no estas seguro del modelo de tu tarjeta puedes verificar de la siguiente forma</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo  lspci | grep VGA
-</code></pre></div></div>
-
-<p>y devuelve algo como</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>04:00.0 VGA compatible controller: NVIDIA Corporation G96 [GeForce 9400 GT](rev-a1)
-</code></pre></div></div>
-
-<p>Actualmente logre hacer el cambio exitoso a debian wheeze y to va funcionado excelente excepto por el driver de la tarjeta de video, no es que no esté funcionando si no que  no se obtiene el rendimiento adecuado y es por el soporte genérico del driver “nouveau” integrado en el kernel.</p>
-
-<p>Ahora para hacer funcionar la tarjeta de video vamos a hacer lo siguiente…!</p>
-
-<p>Primero verificamos que  tenemos instaladas linux-header y linux-imagen de acuerdo la versión de nuestro kernel en mi caso <em>3.2.0-2-686-pae</em></p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$sudo aptitude search linux-image
-</code></pre></div></div>
-
-<p>mostrara el  siguiente resultado:</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>i A linux-image-3.2.0-2-686-pae     - Linux 3.2 for modern Pc
-</code></pre></div></div>
-
-<p>si al principio muestra una “i” es porque el paquete ya se encuentra instalado si muestra una “p” es por que no esta instalado pero esta disponible para ser instalado.</p>
-
-<h2 id="instalando-linux-image">Instalando Linux-image</h2>
-
-<p>Si tu caso te muestra una “p” entonces procedemos a  instalar de la siguiente forma:</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># aptitude install linux-image-3.2.0-2-686-pae
-</code></pre></div></div>
-
-<p>y utilizamos el mismo procedimiento para linux-headers-3.2.0-2-686-pae</p>
-
-<p>luego de instalar verificamos si el driver  nouveau esta cargado de la siguiente forma</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># lsmod
-</code></pre></div></div>
-<p>una manera mas exacta seria con</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>lsmod | grap  nouveau
-</code></pre></div></div>
-<p>y lo agregamos a la lista negra para que no se cargue al inicial el sistema.</p>
-
-<p>Con el editor de texto de tu preferencia abrimos el archivo fbdev-blacklist.conf de la siguiente manera</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># vim.tiny /etc/modprobe.d/fbdev-blacklist.conf
-</code></pre></div></div>
-
-<p>agregamos al final de la linea “blacklist nouveau”  (sin las comillas)  y guardamos los cambios.
-luego instalamos:</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># aptitude install nvidia-glx nvidia-settings nvidia-xconfig &amp;amp;&amp;amp; nvidia-xconfig
-</code></pre></div></div>
-<p>luego de instalar seguramente te dirá que el driver nouveau aun se encuentra cargado y que debe reiniciar…! luego de esto ya podremos tener nuestra tarjeta de video funcionando correctamente.</p>
-
-<p>Espero que les pueda servir de ayuda…!</p>
 
 				<a href="/instalando-nvdia-9400-gt-en-debian-wheezetesting/">leer más.</a>
 				<hr/>				
 							 					
-			</div>
+			</div>			
 			<div class="three columns">
-				<div class="side-section">
-	<h4>Social</h4>
-<ul>
-<li><a href="https://github.com/lordvalor" target="_blank" rel="noopener nofollow" alt="Github">Github</a></li>
-<li><a href="https://twitter.com/lordvalor" target="_blank" rel="noopener nofollow" alt="twitter">Twitter</a></li>
-<li><a href="https://linkedin.com/" target="_blank" rel="noopener nofollow" alt="Linkedin">Linkedin</a></li>
-<li><a href="/feed.xml" target="_blank" alt="rss">RSS</a></li>
-</ul>
+					<div class="side-section">
+		<h4>Social</h4>
+	<ul>
+	<li><a href="https://github.com/lordvalor" target="_blank" rel="noopener nofollow" alt="Github">Github</a></li>
+	<li><a href="https://twitter.com/lordvalor" target="_blank" rel="noopener nofollow" alt="twitter">Twitter</a></li>
+	<li><a href="https://www.linkedin.com/in/lozadav/" target="_blank" rel="noopener nofollow" alt="Linkedin">Linkedin</a></li>
+	<li><a href="/feed.xml" target="_blank" alt="rss">RSS</a></li>
+	</ul>
+	</div>
+	<div class="side-section">
+		<h4>Links</h4>
+	</div>
+	<div class="side-section">
+		
+	</div>  
+
+			</div>
+			<div class="twelve columns">
+				<!-- This loops through the paginated posts -->
+<!-- Pagination links -->
+<div class="pagination">
+  
+    <a href="/" class="previous">
+      Previous
+    </a>
+  
+  <span class="page_number ">
+    Page: 2 of 2
+  </span>
+  
+    <span class="next ">Next</span>
+  
 </div>
-<div class="side-section">
-	<h4>Links</h4>
-</div>
-<div class="side-section">
-	
-</div>  
 			</div>
 		</div>
 	</div>
 	<div class="container">
 	<div clas="row">
 		<div class="twelve columns">
-			<p>Copyright &copy; 2018 Valdemar Lozada  | <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by-nc/4.0/80x15.png"></a></p>
+			<p>Copyright &copy; 2018 lordvalor@blog:~$  | <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by-nc/4.0/80x15.png"></a></p>
 			<p>Powered by <a href="https://jekyllrb.com" target="_blank" rel="noopener nofollow">Jekyll</a>
 		</div>
 	</div>	 

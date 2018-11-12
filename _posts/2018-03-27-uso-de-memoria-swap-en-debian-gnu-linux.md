@@ -6,7 +6,7 @@ categories: Debian
 comments: true
 ---
 Actualmente, tenemos la posibilidad de configurar proporcionalmente el uso de la memoria `swap` en nuestros sistemas [linux](https://en.wikipedia.org/wiki/Linux) gracias al *Kernel*.
-<!--more-->
+
 ## ¿Qué es la memoria swap?
 
 También la conocemos como memoria de intercambio y simplemente una partición en el disco duro, el cual su función es nada mas y nada menos que actuar en función de memoria ram virtual siempre y cuando se haya agotado la disponible en el sistema.

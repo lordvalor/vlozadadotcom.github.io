@@ -7,7 +7,7 @@ categories: Debian
 comments: true
 ---
 Primero que nada, es importante saber que [VirtualBox](https://www.virtualbox.org) es una herramienta de Virtualización creado por Oracle. Cuando hablamos de **Virtualización**, nos referimos a que podremos realizar una instalación de otros sistemas operativos (Windows, MacOS, BSD, Linux) sobre nuestro sistema anfitrion, o cualquiera que sea el sistema operativo principal que tengamos instalado en nuestro computador.
-<!--more-->
+
 Se le hace llamar máquina virtual debido a que básicamente es una computadora instalada dentro de nuestra computadora pero que realmente no interactua con nuestro equipo como lo haría nuestro sistema operativo principal.
 
 Quiza, en ocasiones habras visto que algunas personas llegan a tener en su computador dos o más sistemas operativos instalados, lo mas común de estos casos seria ver linux y windows compartiendo el mismo disco duro pero en particiones diferentes, a eso le llamamos **dualboot**.
@@ -51,7 +51,7 @@ Petición HTTP enviada, esperando respuesta... 200 OK
 Longitud: 3157 (3,1K) [text/plain]
 Grabando a: "oracle_vbox_2016.asc"
 
-oracle_vbox_2016.asc 100%[=====================================================================================>] 3,08K 19,8KB/s en 0,2s
+oracle_vbox_2016.asc 100%[======================================================>] 3,08K 19,8KB/s en 0,2s
 
 2018-05-13 18:06:49 (19,8 KB/s) - "oracle_vbox_2016.asc" guardado [3157/3157]
 ```

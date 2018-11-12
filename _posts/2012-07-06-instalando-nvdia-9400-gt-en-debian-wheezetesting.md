@@ -10,7 +10,7 @@ Este procedimiento es compatible con las tarjetas
 **En Kernel 3.2.0-2-686-pae**
 
 [GeForce](https://www.nvidia.es/page/home.html) 9M series:
-<!--more-->
+
 ```
 9800M GTX, 9800M GTS, 9800M GT, 9800M GS, 9700M GTS, 9700M GT, 9650M GT, 9650M GS, 9600M GT, 9600M GS, 9500M GS, 9500M G, 9400M G, 9400M, 9300M GS, 9300M G, 9200M GS, 9100M G
 ```

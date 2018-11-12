@@ -6,7 +6,7 @@ categories: Linux
 comments: true
 ---
 Hace unos días tenia la tarea de subir ciertas fotografías tomadas con una cámara de 8MP a una pagina web, el problema realmente era que cada fotografías pesaba 2.3MB con una resolución de 3264×2448, algo que a mi parecer no es nada indicado para una galería fotográfica y mucho menos aún con la conexión que tenemos en el país.
-<!--more-->
+
 El asunto era cambiar o bajar dicho tamaño sin sacrificar la calidad de la fotografías y hacerlo a 28 imágenes, investigando un poco di con una forma bastante sencilla a través de la consola linux el único requerimiento para dicha tarea es tener [imagemagick](https://www.imagemagick.org/script/index.php) instalado.
 
 ## Instalando imagemagick en debian

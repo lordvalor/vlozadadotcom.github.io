@@ -1,4 +1,4 @@
-name: lordvalor | blog
+name: lordvalor@blog:~$
 author: "@lordvalor"
 description: Systems Administrator, Web development enthusiast, Minimalist, Open Source activist and free software. User of Debian GNU / Linux.
 author_email: vlozada@protonmail.com
@@ -7,6 +7,7 @@ twitter_username: lordvalor
 github_username: lordvalor
 
 paginate: 5
+paginate_path: "/page:num/"
 permalink: /:title/
 baseurl: ""
 url: https://lordvalor.com

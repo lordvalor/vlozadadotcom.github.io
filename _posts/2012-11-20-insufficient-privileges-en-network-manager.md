@@ -6,7 +6,7 @@ author: lordvalor
 categories: Debian, Linux
 ---
 Al instalar Debian en una [Acer Aspire One d-250](https://en.wikipedia.org/wiki/Acer_Aspire_One) Teniendo razones obvias de rendimiento me decido por **Openbox** como entorno de escritorio.
-<!--more-->
+
 Luego de mucho tiempo usando como gestor de interfaces de redes **WICD** decidí que era hora de darle una oportunidad al amado por mucho y odiado por algunos **Network-Manager.**
 
 Posterior a la configuración de **tint2,** para poder hacer que network-manager se muestre en el systemtray días después tengo la oportunidad de probar mi conexión wifi pero resulta que al tratar de conectarme, me tope con un fabuloso aviso diciéndome “Failed to add new connection: (32) insufficient privileges”.

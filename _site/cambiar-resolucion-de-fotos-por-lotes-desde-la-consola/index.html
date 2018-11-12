@@ -17,13 +17,14 @@
    <link rel="stylesheet" href="/assets/css/skeleton.css">
    <link rel="stylesheet" src="https://necolas.github.io/normalize.css/8.0.0/normalize.css">
    <link rel="stylesheet" href="/assets/css/custom.css">
-   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,300,600">
+<!--   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,300,600">-->
    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
    <script id="dsq-count-scr" src="//https-lordvalor-com.disqus.com/count.js" async></script>
  </head>
 <!--end header-->
 <body>
-	<div class="navbar">
+	<div class="container">
+<div class="navbar">
 <nav>
 	<ul><li><a href="/" title="home" class="owner">@lordvalor</a></li>
 		<li><a href="/" title="home">Home</a></li>
@@ -32,16 +33,16 @@
 	</ul>
 </nav>	
 </div>
-
+</div>
 	<div class="container">
 		<div class="row">
 			<div class="nine columns">
 				<h1>Cambiar resolución de fotos por lotes desde la consola. </h1>
 				<p>Publicado el Jun 03, 2013 | por @lordvalor | en  Linux </p>
 				<div class="content">
-					<p>Hace unos días tenia la tarea de subir ciertas fotografías tomadas con una cámara de 8MP a una pagina web, el problema realmente era que cada fotografías pesaba 2.3MB con una resolución de 3264×2448, algo que a mi parecer no es nada indicado para una galería fotográfica y mucho menos aún con la conexión que tenemos en el país.
-<!--more-->
-El asunto era cambiar o bajar dicho tamaño sin sacrificar la calidad de la fotografías y hacerlo a 28 imágenes, investigando un poco di con una forma bastante sencilla a través de la consola linux el único requerimiento para dicha tarea es tener <a href="https://www.imagemagick.org/script/index.php">imagemagick</a> instalado.</p>
+					<p>Hace unos días tenia la tarea de subir ciertas fotografías tomadas con una cámara de 8MP a una pagina web, el problema realmente era que cada fotografías pesaba 2.3MB con una resolución de 3264×2448, algo que a mi parecer no es nada indicado para una galería fotográfica y mucho menos aún con la conexión que tenemos en el país.</p>
+
+<p>El asunto era cambiar o bajar dicho tamaño sin sacrificar la calidad de la fotografías y hacerlo a 28 imágenes, investigando un poco di con una forma bastante sencilla a través de la consola linux el único requerimiento para dicha tarea es tener <a href="https://www.imagemagick.org/script/index.php">imagemagick</a> instalado.</p>
 
 <h2 id="instalando-imagemagick-en-debian">Instalando imagemagick en debian</h2>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo apt-get install imagemagick
@@ -66,21 +67,22 @@ $ cd /home/ususario/imagenes/album
 				</div>                          
 			</div>
 			<div class="three columns">				
-				<div class="side-section">
-	<h4>Social</h4>
-<ul>
-<li><a href="https://github.com/lordvalor" target="_blank" rel="noopener nofollow" alt="Github">Github</a></li>
-<li><a href="https://twitter.com/lordvalor" target="_blank" rel="noopener nofollow" alt="twitter">Twitter</a></li>
-<li><a href="https://linkedin.com/" target="_blank" rel="noopener nofollow" alt="Linkedin">Linkedin</a></li>
-<li><a href="/feed.xml" target="_blank" alt="rss">RSS</a></li>
-</ul>
-</div>
-<div class="side-section">
-	<h4>Links</h4>
-</div>
-<div class="side-section">
-	
-</div>  
+					<div class="side-section">
+		<h4>Social</h4>
+	<ul>
+	<li><a href="https://github.com/lordvalor" target="_blank" rel="noopener nofollow" alt="Github">Github</a></li>
+	<li><a href="https://twitter.com/lordvalor" target="_blank" rel="noopener nofollow" alt="twitter">Twitter</a></li>
+	<li><a href="https://www.linkedin.com/in/lozadav/" target="_blank" rel="noopener nofollow" alt="Linkedin">Linkedin</a></li>
+	<li><a href="/feed.xml" target="_blank" alt="rss">RSS</a></li>
+	</ul>
+	</div>
+	<div class="side-section">
+		<h4>Links</h4>
+	</div>
+	<div class="side-section">
+		
+	</div>  
+
 			</div>
 		</div>	
 </div>
@@ -105,7 +107,7 @@ $ cd /home/ususario/imagenes/album
 <div class="container">
 	<div clas="row">
 		<div class="twelve columns">
-			<p>Copyright &copy; 2018 Valdemar Lozada  | <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by-nc/4.0/80x15.png"></a></p>
+			<p>Copyright &copy; 2018 lordvalor@blog:~$  | <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by-nc/4.0/80x15.png"></a></p>
 			<p>Powered by <a href="https://jekyllrb.com" target="_blank" rel="noopener nofollow">Jekyll</a>
 		</div>
 	</div>	 
