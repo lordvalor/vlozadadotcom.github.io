@@ -8,7 +8,6 @@ github_username: lordvalor
 
 paginate: 5
 paginate_path: "/page:num/"
-permalink: /404.html
 permalink: /:title/
 baseurl: ""
 url: https://lordvalor.com
