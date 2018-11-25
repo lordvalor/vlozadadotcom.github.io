@@ -1,30 +1,52 @@
-body{
-	
-	font-family: "Source Sans Pro", sans-serif;
+body{	
+	font-family: "Source Sans Pro", sans-serif;	
 }
-/**h1,h2,h3,h4,h5,h6{
-	color: #0affff;
-	}
-**/
-/*h1,h2,h3,h4,h5,h6{
-	font-family: "Source Sans Pro", sans-serif !important;
-}*/
-p code.highlighter-rouge{color: #d14;}
+.wrap-post {
+	padding: 15px;
+    background: #fff;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    border: 1px solid rgba(0,0,0,0.09);
+    border-radius: 3px;
+    margin-bottom: 15px;
+}
+.image-profile{
+	width: 125px;
+	margin-bottom: 25px;
+	border-radius: 100%;
+	transition: all .2s;
+	box-shadow: 0;
+	opacity: 1;
+}
+h1 h2 h3 h4 h5 h6{
+	font-family: "Source Sans Pro", sans-serif;	
+} 
+.icons li{
+ 	display: inline;
+	padding: 10px;
+}
+.nav li{
+	display: inline;
+	padding: 5px
+}
+p{color: #666;}
+.header{
+	margin-top: 8rem;
+	text-align: center;
+}
+p code.highlighter-rouge{color: #A21031;}
 
 a{
-	color: #2c2c2c;
+	color: #666;
 	text-decoration: none;
 }
 a:hover{
-	color:  #000;
-	font-weight: bold;
+	color:  #000;	
 }
 .owner{
 	padding: 5px;
 }
 .navbar{	
-	border-left: 0px;
-	border-right: 0px;
+	border: 1px solid rgba(0,0,0,0.09);	
 	-webkit-box-shadow:0px 1px 1px #222;
     -moz-box-shadow:0px 1px 1px #222;
     box-shadow:0px 1px 1px #222;
@@ -47,3 +69,10 @@ float: left;
     padding: 14px 16px;
     text-decoration: none;
 }
+/**h1,h2,h3,h4,h5,h6{
+	color: #0affff;
+	}
+**/
+/*.container{
+    background: #fff;
+}*/
