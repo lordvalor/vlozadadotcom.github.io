@@ -1,4 +1,4 @@
-name: Valdemar Lozada
+name: lordvalor
 author: "@lordvalor"
 description: Linux system administrator and web development enthusiast, Minimalist, Open Source activist. Debian GNU / Linux user.
 author_email: vlozada@protonmail.com
@@ -10,7 +10,7 @@ paginate: 5
 paginate_path: "/page:num/"
 permalink: /:title/
 baseurl: ""
-url: https://lordvalor.com
+url: https://lordvalor.github.com
 timezone: 'America/Lima'
 highlighter: 'rouge'
 plugins:
