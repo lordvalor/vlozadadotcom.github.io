@@ -2,3 +2,5 @@
 *.swp
 .git
 .bundle
+_site/
+*.lock
