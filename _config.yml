@@ -5,6 +5,7 @@ author_email: vlozada@protonmail.com
 
 twitter_username: lordvalor
 github_username: lordvalor
+mastodon_username: lordvalor
 
 paginate: 5
 paginate_path: "/page:num/"
