@@ -1,16 +1,16 @@
-name: lordvalor
-author: "@lordvalor"
+name: v0251b
+author: "@v0251b"
 description: Linux system administrator and web development enthusiast, Minimalist, Open Source activist. Debian GNU / Linux user.
 author_email: vlozada@protonmail.com
 
-twitter_username: lordvalor
-github_username: lordvalor
+twitter_username: v0251b
+github_username: v0251b
 
 paginate: 5
 paginate_path: "/page:num/"
 permalink: /:title/
 baseurl: ""
-url: https://lordvalor.github.com
+url: https://v0251b.github.com
 timezone: 'America/Lima'
 highlighter: 'rouge'
 plugins:
