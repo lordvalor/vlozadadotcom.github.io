@@ -1,27 +1,27 @@
-name: v0251b
-author: "@v0251b"
-description: Administrador de Sistemas GNU/Linux, Minimalist, Actualmente Aprendiendo sobre desarrollo Web con JavaScript
+name: Valdemar Lozada
+author: "Valdemar Lozada"
+description: Administrador de Sistemas GNU/Linux, Minimalist, Desarrollo web.
 author_email: vlozada@protonmail.com
 
-twitter_username: v0251b
-github_username: v0251b
+twitter_username: vlozadaDev
+github_username: vlozadadotcom
 
 paginate: 5
 paginate_path: "/page:num/"
 permalink: /:title/
 baseurl: ""
-url: https://v0251b.github.com
-timezone: 'America/Lima'
-highlighter: 'rouge'
+url: https://vlozada.com
+timezone: "America/Lima"
+highlighter: "rouge"
 plugins:
-- jekyll-feed
-- jekyll-paginate
-- jekyll-sitemap
-- jekyll-seo-tag
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-seo-tag
 
 exclude:
-- CNAME
-- .gitignore
-- README.md
-- Gemfile
-- Gemfile.lock
+  - CNAME
+  - .gitignore
+  - README.md
+  - Gemfile
+  - Gemfile.lock
