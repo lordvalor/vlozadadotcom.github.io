@@ -17,6 +17,7 @@ header {
   padding: 15px;
   background-color: lightgrey;
   height: 50vh;
+  margin: 0 0 10px 0;
 }
 .container {
   margin: 0 auto;
