@@ -25,3 +25,13 @@ exclude:
   - README.md
   - Gemfile
   - Gemfile.lock
+webmentions:
+  username: vlozada.com
+  # Use my own cache folder
+  cache_folder: .cache
+  # skip bad URLs for 5 days
+  cache_bad_uris_for: 5
+  # I moved to www and then to https, so…
+  legacy_domains:
+    - https://vlozada.com
+    - http://www.vlozada.com
