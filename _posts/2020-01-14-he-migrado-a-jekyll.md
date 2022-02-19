@@ -5,7 +5,7 @@ tagline: Migracion de CMS WordPress a Jekyll CMS
 categories: blog
 ---
 
-Ahora he migrado a [Jekyll](https://jekyllrb.com/){:title="Jekyll" target="_blank" rel="noopener"}, no ha sido una fácil decisión luego de haber probado diversos CMS, como WordPress por ejemplo, CMS el cual uso a diario para proyectos profesionales y de clientes. Pero he decidido que para my blog, no necesito recursos innecesarios, como mantener un servidor con php y mysql. No necesito una base de datos para esto.
+Ahora he migrado a [Jekyll](https://jekyllrb.com/){:title="Jekyll" target="_blank" rel="noopener"}, no ha sido una fácil decisión luego de haber probado diversos CMS, como [WordPress](https://wordpress.org){:title="WordPress" target="_blank" rel="noopener"} por ejemplo, CMS el cual uso a diario para proyectos profesionales y de clientes. Pero he decidido que para my blog, no necesito recursos innecesarios, como mantener un servidor con php y mysql. No necesito una base de datos para esto.
 
 He decido usar Jekyll debido a que ya lo conocía y me ha gustado mucho la simpleza al momento de generar un sitio, es muy fácil de aprender. Unas de las ventajas de crear sitios estáticos o HTML plano, es que podremos hospedar en casi cualquier servidor web, incluso en Servicios como Github pages o netlify, así que te da una ventaja en cuanto a rendimiento y desempeño. Es mucho mas rápido que un sitio dinámico.
 
