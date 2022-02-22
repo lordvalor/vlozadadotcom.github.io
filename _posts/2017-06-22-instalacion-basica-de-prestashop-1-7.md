@@ -163,7 +163,7 @@ En este punto, si todo ha salido bien, deberiamos ir a nuestro navegador y escri
 
 `http://120.xx.xx.xx/ps_test/`
 
-> Donde *120.xx.xx.xx* será la IP de nuestro servidor.
+> Donde **120.xx.xx.xx** será la IP de nuestro servidor.
 
 y automaticamente seremos redireccionados a la pagina de instalación:
 
@@ -171,8 +171,8 @@ y automaticamente seremos redireccionados a la pagina de instalación:
 
 El cual nos muestra un asistente para continuar la configuración de la tienda:
 
--Seleccionamos el Idioma y presionamos **[NEXT].**
--Aceptamos el License Agreements y presionamos  **[NEXT].**
+-Seleccionamos el Idioma y presionamos **[NEXT]**.
+-Aceptamos el License Agreements y presionamos  **[NEXT]**.
 
 En este punto, probablemente nos muestra una ventana con algunos **Warning** relacionados con permisos de nuestros archivos.
 
@@ -215,4 +215,3 @@ Los datos que solicita son los siguientes:
 Presionamos **[NEXT]** y lograremos ver una barra de progreso realizando la instalación de nuestra tienda y si todo sale perfecto lograremos ver el siguiente mensaje:
 
 _Your installation is finished! You have just finished installing your shop. Thank you for using PrestaShop! Please remember your login information:_
-
