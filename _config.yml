@@ -25,6 +25,7 @@ exclude:
   - README.md
   - Gemfile
   - Gemfile.lock
+
 webmentions:
   username: vlozada.com
   # Use my own cache folder
@@ -34,4 +35,4 @@ webmentions:
   # I moved to www and then to https, so…
   legacy_domains:
     - https://vlozada.com
-    - http://www.vlozada.com
+    - https://www.vlozada.com

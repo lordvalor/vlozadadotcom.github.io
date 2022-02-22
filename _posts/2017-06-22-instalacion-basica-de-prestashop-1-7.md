@@ -203,11 +203,16 @@ En este punto, el sistema te solicita los datos para conectarte a la DB que crea
 Los datos que solicita son los siguientes:
 
 -**Database server address** podremos dejar como viene por defecto `127.0.0.1` o escribimos `localhost`.
+
 -**Database name** acá escribimos el nombre de la db que hemos creado, en este ejemplo se usó `prestashop_test`
+
 -**Database login** Aquí colocas el usuario que te haya asignado el Administador de Sistemas.
+
 -**Database password** y Aca, el password que te haya asignador el Administador de Sistemas.
+
 -**Tables prefix** hace referencia a prefijo que utilizaran las tablas creadas por PrestaShop, esto es mejor dejarlo extamente como está. por defecto es `ps_`
 
 Presionamos **[NEXT]** y lograremos ver una barra de progreso realizando la instalación de nuestra tienda y si todo sale perfecto lograremos ver el siguiente mensaje:
 
-**Your installation is finished! You have just finished installing your shop. Thank you for using PrestaShop! Please remember your login information:**
+_Your installation is finished! You have just finished installing your shop. Thank you for using PrestaShop! Please remember your login information:_
+
