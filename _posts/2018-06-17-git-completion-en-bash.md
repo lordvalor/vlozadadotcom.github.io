@@ -5,10 +5,11 @@ date:  2018-06-17 21:48:29 -0500
 tagline: Haciendo uso de Bash completion con git
 categories: Git
 ---
+
 Si eres usuario bash puedes acceder algunas funciones de tu shell para potenciar tu experiencia con git y git-completion para hacerlo más amigable. Git Realmente contiene varios complementos para varios shell pero no están activados por defecto. Unas de las características de GIT es su auto completado, por ejemplo si escribimos `git chec` y tabulamos dos veces, vera que auto completa a `git checkout` si en su caso no lo hace, solamente deberá instalarlo de la siguiente manera:
 
-```
-$ sudo apt-get install bash-completion
+```console
+sudo apt-get install bash-completion
 ```
 
 Luego de instalar, veremos que ya obtendremos la característica de auto completado.
@@ -22,7 +23,7 @@ Normalmente se desea ver el directorio actual donde nos encontramos trabajando y
 
 En este caso debemos, con nuestro editor de (texto preferido) abrir el archivo `.bashrc` y agregar al final del archivo lo siguiente:
 
-```
+```bash
 # Git Bash Completion and folder status
 
 export PS1='\u@\h:\w\[\033[32m\]$(__git_ps1 " (%s)")\[\033[0m\]$ '

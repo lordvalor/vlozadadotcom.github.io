@@ -20,13 +20,11 @@ Sin embargo existen otros casos un poco menos "exigentes" en los que no tenemos 
 ## Instalando VirtualBox
 En caso de **Debian** y derivados, lo podremos encontrar en repositorios oficiales, sin embargo yo recomeindo utilizar los repositorios de la pagina para obtener la última version estable del **vbox**
 
-**Comencemos**
-
 ## Editando nuestros source.list
 
 En este paso, debemos saber cual es la versión de nuestro sistema, en mi caso utilizo Debian y usaré **stretch** y lo colocaremos de la siguiente manera:
 
-```
+```console
 deb https://download.virtualbox.org/virtualbox/debian mydist contrib
 ```
 
@@ -35,7 +33,8 @@ En donde `mydist` será la versión que usaremos. Luego de comprendido esto, pro
 `$ sudo vim /etc/apt/source.list`
 
 y agregamos el repositorio
-```
+
+```console
 deb https://download.virtualbox.org/virtualbox/debian stretch contrib
 ```
 
@@ -47,7 +46,7 @@ Ahora, debemos agregar los *public key* para realizar una descarga segura desde 
 
 y si todo sale bien, deberia mostrar una salida como la siguiente:
 
-```
+```console
 --2018-05-13 18:06:48-- https://www.virtualbox.org/download/oracle_vbox_2016.asc
 Resolviendo www.virtualbox.org (www.virtualbox.org)... 137.254.60.32
 Conectando con www.virtualbox.org (www.virtualbox.org)[137.254.60.32]:443... conectado.
@@ -62,11 +61,11 @@ oracle_vbox_2016.asc 100%[======================================================
 
 Luego de esto procedemos a agregar
 
-```
+```console
 sudo apt-key add oracle_vbox_2016.asc
 ```
 
-```
+```console
 OK
 ```
 
@@ -76,7 +75,7 @@ Si queremos realizar todo desde un solo comando para decargar y agregar, se hace
 
 la huella de la llave deberia ser la siguiente:
 
-```
+```console
 B9F8 D658 297A F3EF C18D 5CDF A2F6 83C5 2980 AECF
 Oracle Corporation (VirtualBox archive signing key) <info@virtualbox.org></info@virtualbox.org>
 ```

@@ -51,7 +51,7 @@ Luego de terminar la descarga, procedemos a descomprimir:
 
 obtendremos la siguiente salida:
 
-```
+```console
 Archive:  prestashop_1.7.1.2.zip
   inflating: prestashop.zip          
   inflating: index.php               
@@ -74,7 +74,7 @@ Conectando a mysql (Debe solicitar credenciales para acceder a la Instancia mysq
 
 luego de acceder a nuestra instancia
 
-```
+```mysql
 Welcome to the MySQL monitor.  Commands end with ; or \g.
 Your MySQL connection id is 140
 Server version: 5.7.18-0ubuntu0.16.04.1 (Ubuntu)
@@ -90,13 +90,14 @@ Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
 mysql>
 
 ```
+
 Para ver los nombres de las DB's existentes Escibimos lo siguiente:
 
 `show databases;`
 
  y obtendremos la siguiente salida:
 
-```
+```mysql
  mysql> show databases;
 +--------------------+
 | Database           |
@@ -106,6 +107,7 @@ Para ver los nombres de las DB's existentes Escibimos lo siguiente:
 |db_tes2             |
 +--------------------+
 ```
+
 De esa manera veificamos que no se repita el nombre de la db que usaremos.
 
 Precedemos a crear la DB necesaria para nuestro prestaShop de prueba.
@@ -114,7 +116,7 @@ Precedemos a crear la DB necesaria para nuestro prestaShop de prueba.
 
 eso nos devolverá lo siguiente:
 
-```
+```mysql
 Query OK, 1 row affected (0.00 sec)
 ```
 
@@ -124,7 +126,7 @@ para verificar que se ha creado nuestra DB con el nombre asignado, volvemos a es
 
 y deberiamos ver lo siguiente:
 
-```
+```mysql
  mysql> show databases;
 +--------------------+
 | Database           |
@@ -142,7 +144,7 @@ escribimos.
 
 `\q`
 
-```
+```console
 Bye 
 ```
 
@@ -154,7 +156,7 @@ Ahora que ya tenemos todo preparado para la instalación, debememos descomprimir
 
 Luego que comienza a descomprimir, en algun punto nos pide reemplazar el archivo index.php existente:
 
-```
+```console
 replace index.php? [y]es, [n]o, [A]ll, [N]one, [r]ename:
 ```
 

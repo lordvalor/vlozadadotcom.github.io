@@ -11,19 +11,20 @@ El asunto era cambiar o bajar dicho tamaño sin sacrificar la calidad de la foto
 
 ## Instalando imagemagick en debian
 
-```
-$ sudo apt-get install imagemagick
+```console
+sudo apt-get install imagemagick
 ```
 
 luego que ya está instalado vamos al directorio en donde están las fotografías que vamos trabajar.
 
-`
-$ cd /home/ususario/imagenes/album
-`
+```console
+cd /home/ususario/imagenes/album
+```
+
 y ejecutamos lo siguiente:
 
-```
-$ for IMG in `ls *.jpg`; do convert -sample 20%X20% -quality 85 $IMG reducido-$IMG; done
+```bash
+for IMG in `ls *.jpg`; do convert -sample 20%X20% -quality 85 $IMG reducido-$IMG; done
 ```
 
 el tiempo que tarda dependerá de la cantidad de fotos y el tamaño de cada una de ellas. El nombre reducido-$IMG seria el prefijo que se le asigna a la fotografía dimensionada, podemos usar el que veamos más conveniente

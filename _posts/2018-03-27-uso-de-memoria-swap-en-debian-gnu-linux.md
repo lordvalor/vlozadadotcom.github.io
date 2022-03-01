@@ -24,26 +24,26 @@ Para cambiar esto valores debemos realizar lo siguiente:
 
 ## Verificamos el valor actual
 
-```
+```console
 $ cat /proc/sys/vm/swappiness
 60
 ```
 
 Si queremos cambiar en tiempo real, lo haríamos a través del uso del sysctl:
 
-```
+```console
 sysctl vm.swappiness=30
 ```
 
 Sin embargo con este método, al realizar un reinicio perderemos dicho cambios, de modo que si queremos hacerlo permanente seria de la siguiente forma:
 
-```
+```console
 sudo vim /etc/sysctl.conf
 ```
 
 entonces si ya existe la linea, la modificamos, de lo contrario agregamos lo siguiente:
 
-```
+```console
 vm.swappiness=10
 ```
 

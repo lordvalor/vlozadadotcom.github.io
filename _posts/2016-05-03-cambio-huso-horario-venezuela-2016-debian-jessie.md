@@ -17,7 +17,8 @@ Para los que usamos Debian sea en su computador personal o en servidores, la ver
 ## Descarga
 
 Lo primero que debemos hacer es descargar el paquete **tzdata**
-```
+
+```console
 # wget -c http://ftp.us.debian.org/debian/pool/main/t/tzdata/tzdata_2016d-0+deb8u1_all.deb
 ```
 
@@ -25,17 +26,19 @@ Lo primero que debemos hacer es descargar el paquete **tzdata**
 
 luego procedemos a instalar de la siguiente manera:
 
-```
+```console
 dpkg -i tzdata_2016d-2_all.deb
 ```
 
 luego de ser instado, verificamos los cambios.
-```
+
+```console
 # zdump -v /etc/localtime
 ```
 
 y deberíamos tener una salida como la siguiente.
-```
+
+```console
 /etc/localtime  -9223372036854689408 = NULL
 /etc/localtime  Wed Jan  1 04:27:43 1890 UT = Tue Dec 31 23:59:59 1889 LMT isdst=0 gmtoff=-16064
 /etc/localtime  Wed Jan  1 04:27:44 1890 UT = Wed Jan  1 00:00:04 1890 CMT isdst=0 gmtoff=-16060
@@ -57,7 +60,7 @@ Verificamos las dos ultimas lineas que nos muestran los cambios referentes al 01
 
 Para transferir los cambios al la hora de la tarjeta madre, lo hacemos de la siguiente manera:
 
-```
+```console
 # hwclock --systohc --utc
 ```
 
@@ -69,7 +72,7 @@ nuevamente Verificamos los cambios de la siguiente manera:
 
 y nos devolverá algo como esto:
 
-```
+```console
   Universal time: mar 2016-05-03 19:13:41 UTC
         RTC time: mar 2016-05-03 19:13:40
        Time zone: America/Caracas (VET, -0400)
