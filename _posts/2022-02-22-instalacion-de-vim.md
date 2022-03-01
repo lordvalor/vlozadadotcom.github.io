@@ -5,17 +5,17 @@ tagline: Instalacion Básica de VIM para comenzar desde cero.
 categories: vim
 ---
 
-Finalmente retomo la escritura en mi blog, y comenzamos con una serie de post Sobre **VIM**, Despues de mucho tiempo retomamos con una Instalción básica de [vim](https://www.vim.org/) para comenzar desde cero.
+Finalmente de vuelta en mi blog, y comenzamos con una serie de post Sobre **VIM**, Despues de mucho tiempo retomamos con una Instalción básica de [vim](https://www.vim.org/) para comenzar desde cero.
 
-Primero que nada, Para comenzar es necesario dar una pequeña instroducción de los que es VIM y como utilizarlo.
+Primero que nada, Para comenzar es necesario dar una pequeña introducción de lo que es VIM y como utilizarlo por primera vez.
 
-Si eres Usuario Linux o has trabajado con algún sistema Unix, seguramente habras escuchado mencionar **VIM** en algun momento de tu carrera.
+Si eres Usuario Linux o has trabajado con algún sistema Unix, seguramente habras escuchado mencionar **VIM** en algún momento de tu carrera.
 
-De forma resumida, podriamos decir que vim es una version mejorada de **vi** presente en todos los sistemas UNIX. se puede usar desde la terminal y lo que lo hace más atractivo para muchos es que se controla por completo mediante comandos del teclado, prescindiendo casi por completo del raton, pero eso no queire decir que solo trabaja en modo texto, tambien tiene una interfaz gráfica. Es decir que podemos usar menús y tener soporte para el raton. pero no solamente es exclusivo para Sistemas UNIX si no que tambien se encuentra disponible para Windows. [Acá una explicación mas extensa acerca de vim](https://www.vim.org/6k/features.es.txt)
+De forma resumida, podriamos decir que vim es una versión mejorada de **vi**, presente en todos los sistemas UNIX. se puede usar desde la terminal y lo que lo hace más atractivo para muchos es que se controla por completo mediante comandos del teclado, prescindiendo casi por completo del raton, pero eso no queire decir que solo trabaja en modo texto, tambien tiene una interfaz gráfica. Es decir que podemos usar menús y tener soporte para el raton. pero no solamente es exclusivo para Sistemas UNIX si no que tambien se encuentra disponible para Windows. [Acá una explicación mas extensa acerca de vim](https://www.vim.org/6k/features.es.txt)
 
 ## Instalación
 
-```bash
+```console
 # apt -y install vim
 ```
 
@@ -31,11 +31,11 @@ Para personalizarlo para nuestro usuario, en el caso de Linux. podemos realizar 
 touch ~/.vimrc
 ```
 
-En este archívo podemos comenzar a personalizar, activar funciones segun lo que necestimos. Pero comencemos con lo basico para ir extendiendo nuestra configuración. Abrimos nuestro archivo `~/.vimrc` con el editor de texto de preferencia y empezamos a escribir lo siguiente.
+En este archívo podemos comenzar a personalizar, activar funciones segun lo que necestimos. Pero comencemos con lo basico para ir extendiendo nuestra configuración. 
+
+Abrimos nuestro archivo `~/.vimrc` con el editor de texto de preferencia y empezamos a escribir lo siguiente:
 
 > Nota: Los los comentarios en el archivo vimrc comienzan con ( " )
-
-Abrimos nuestro archivo .vimrc y vamos agregando lo siguiente:
 
 ```vim
 " Habilitar para resaltar la sintaxis del lenguaje que uses por default. 
@@ -82,8 +82,8 @@ set mosue=a
 set number
 ```
 
-Luego de haber agregado dichas lineas, si no hubo errores, podemos entrar a vim y notaremos algunos cambios, como la nuneración de lineas del lado izquierdo. entre otras.
+Luego de haber agregado dichas lineas, si no hubo errores, podemos entrar a vim y notaremos algunos cambios, como la nuneración de lineas del lado izquierdo, entre otras.
 
-solo necesitamos ejecutar dessde nuestro terminal  el comando `vim`
+solo necesitamos ejecutar desde nuestro terminal el comando `vim`
 
 En el próximo post estaremos viendo un poco más a profundidad la personalización de vim y algunos comando importantes para comenzar a usarlo.
