@@ -55,9 +55,11 @@ article {
 pre {
   padding: 5px;
   background-color: #000;
-  margin: 1px solid lightgrey;
   border-radius: 5px;
   overflow: auto;
+  line-height: 1.3rem;
+  margin-bottom: 1.6rem;
+  max-width: 100%;
 }
 pre code {
   color: #fff;
