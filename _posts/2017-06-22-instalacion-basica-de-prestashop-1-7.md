@@ -8,7 +8,7 @@ categories: Prestashop
 
 Instalación Básica de [Prestashop 1.7](https://www.prestashop.com/en){:target="blank" rel="noopener"} en una instancia [AWS](https://aws.amazon.com/){:target="_blank" rel="noopener"} ec2 en ubuntu
 
-**Instalación paso a paso en _EC2-AWS_ on _ubuntu-server_**
+**Instalación paso a paso en _EC2-AWS_ con _Ubuntu Server_**
 
 Herramientas:
 
@@ -17,13 +17,13 @@ Herramientas:
 * ssh
 * chmod chown
 
-## Conectando "servidor desarrollo."
+## Conectando "servidor desarrollo"
 
 Para conectarnos al Servidor Desarrollo, usando las credenciales asignadas de la siguiente manera:
 
 `ssh -i ~./ssh/keyName.pem usuario@ec2-xx-x-xx-228.compute-1.amazonaws.com`
 
-## 1 Descargando PrestaShop Version 1.7 Estable.
+## 1 Descargando PrestaShop Version 1.7 Estable
 
 En este caso, trabajaremos bajo el directorio /var/www/html/
 
@@ -62,7 +62,7 @@ En este punto, si hemos seguido paso a paso, podriamos acceder a travez del nave
 
 `http://120.xx.xx.xx/ps_test/`
 
-> Donde **120.xx.xx.xx** será la IP de nuestro servidor. 
+> Donde **120.xx.xx.xx** será la IP de nuestro servidor.
 
 ## 2 Creando DB mysql
 
@@ -72,7 +72,7 @@ Conectando a mysql (Debe solicitar credenciales para acceder a la Instancia mysq
 
 > donde "usuario" y password será el proporcionado por el administrador de sistemas.
 
-luego de acceder a nuestra instancia 
+luego de acceder a nuestra instancia
 
 ```
 Welcome to the MySQL monitor.  Commands end with ; or \g.
@@ -93,8 +93,9 @@ mysql>
 Para ver los nombres de las DB's existentes Escibimos lo siguiente:
 
 `show databases;`
- 
+
  y obtendremos la siguiente salida:
+
 ```
  mysql> show databases;
 +--------------------+
