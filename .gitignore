@@ -6,3 +6,5 @@ _site/
 *.lock
 .jekyll-cache/
 vendor
+.vscode/
+.cache/
