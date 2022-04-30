@@ -1,12 +1,15 @@
-source 'https://rubygems.org'
-ruby RUBY_VERSION
+# frozen_string_literal: true
 
-gem 'jekyll', '3.8.4'
+source "https://rubygems.org"
+
+git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
+
+ gem "jekyll"
 
 group :jekyll_plugins do
   gem 'jekyll-feed'
   gem 'jekyll-seo-tag'
   gem 'jekyll-sitemap'
   gem 'jekyll-paginate'
-  gem "kramdown", ">= 2.3.1"
+  gem 'kramdown' 
 end
