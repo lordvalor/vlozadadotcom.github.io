@@ -8,7 +8,8 @@ github_username: vlozadadotcom
 
 paginate: 5
 paginate_path: "/page:num/"
-permalink: /:title/
+permalink: /:title
+
 baseurl: ""
 url: https://vlozada.com
 timezone: "America/Lima"
