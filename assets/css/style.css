@@ -15,7 +15,7 @@ header {
   flex-direction: column;
   text-align: center;
   padding: 15px;
-  background-color: lightgrey;
+  background-color: #e9e5df;
   height: 50vh;
   margin: 0 0 10px 0;
 }
@@ -34,8 +34,10 @@ span.categories {
   color: #fff;
   font-size: 0.8rem;
 }
-nav li {
+.header nav > li {
   display: inline-block;
+  padding: 25px 10px;
+  margin-bottom: 0.5rem;
 }
 a {
   text-decoration: none;
