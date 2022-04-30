@@ -17,7 +17,7 @@ Este procedimiento es compatible con las tarjetas
 Si no estas seguro del modelo de tu tarjeta puedes verificar de la siguiente forma:
 
 ```console
-$ sudo  lspci | grep VGA
+sudo  lspci | grep VGA
 ```
 
 y devuelve algo como
@@ -59,6 +59,7 @@ luego de instalar verificamos si el driver  nouveau esta cargado de la siguient
 ```console
 # lsmod
 ```
+
 una manera mas exacta seria con
 
 ```console

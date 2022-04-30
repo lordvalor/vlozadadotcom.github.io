@@ -18,6 +18,7 @@ El dualboot es comunmente usado por personas que en algunos casos utilizan linux
 Sin embargo existen otros casos un poco menos "exigentes" en los que no tenemos la necesidad de compartir nuestro disco duro con un `SO` que no queramos usar, o que solamente usaremos para cosas puntuales o especeficas como: probar herramientas, simular equipos en red, configuraciones bases y más. todo esto lo podremos hacer en una maquina virtual [VM]. y de esta manera no tendremos que estar reiniciando para cambiar o alternar entre sistemas operativos.
 
 ## Instalando VirtualBox
+
 En caso de **Debian** y derivados, lo podremos encontrar en repositorios oficiales, sin embargo yo recomeindo utilizar los repositorios de la pagina para obtener la última version estable del **vbox**
 
 ## Editando nuestros source.list

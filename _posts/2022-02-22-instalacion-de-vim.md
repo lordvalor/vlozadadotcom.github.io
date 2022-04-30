@@ -31,7 +31,7 @@ Para personalizarlo para nuestro usuario, en el caso de Linux. podemos realizar 
 touch ~/.vimrc
 ```
 
-En este archívo podemos comenzar a personalizar, activar funciones segun lo que necestimos. Pero comencemos con lo basico para ir extendiendo nuestra configuración. 
+En este archívo podemos comenzar a personalizar, activar funciones segun lo que necestimos. Pero comencemos con lo basico para ir extendiendo nuestra configuración.
 
 Abrimos nuestro archivo `~/.vimrc` con el editor de texto de preferencia y empezamos a escribir lo siguiente:
 

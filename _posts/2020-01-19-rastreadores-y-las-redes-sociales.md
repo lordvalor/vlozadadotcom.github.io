@@ -55,6 +55,6 @@ Las huellas Digitales o Fingerprinters pueden recoger información sobre las con
 
 ### En Conclusión
 
-Es importante que sepas que incluso instalando Mozilla Firefox estas evitando ser rastreado. Firefox no bloquea nada de esto de manera predeterminada. por eso es importante revisas las opciones de Privacidad de Firefox luego de instalar, pero también se pueden reforzar con algunos otros complementos para ayudar a fortalecer tu seguridad y privacidad en la red. 
+Es importante que sepas que incluso instalando Mozilla Firefox estas evitando ser rastreado. Firefox no bloquea nada de esto de manera predeterminada. por eso es importante revisas las opciones de Privacidad de Firefox luego de instalar, pero también se pueden reforzar con algunos otros complementos para ayudar a fortalecer tu seguridad y privacidad en la red.
 
 En un próximo post, estaré hablando un poco sobre algunas extensiones para mejorar tu privacidad desde el navegador.
