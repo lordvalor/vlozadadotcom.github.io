@@ -25,6 +25,7 @@ exclude:
   - README.md
   - Gemfile
   - Gemfile.lock
+  
 
 webmentions:
   username: vlozada.com
