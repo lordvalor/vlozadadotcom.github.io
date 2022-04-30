@@ -62,15 +62,12 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  jekyll (= 3.8.4)
+  jekyll
   jekyll-feed
   jekyll-paginate
   jekyll-seo-tag
   jekyll-sitemap
   kramdown
-
-RUBY VERSION
-   ruby 2.7.4p191
 
 BUNDLED WITH
    2.2.31
