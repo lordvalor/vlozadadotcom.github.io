@@ -3,7 +3,7 @@
 .git
 .bundle
 _site/
-*.lock
+#*.lock
 .jekyll-cache/
 vendor
 .vscode/
