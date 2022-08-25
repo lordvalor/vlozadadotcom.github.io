@@ -12,8 +12,7 @@ title: Home
     {% for post in site.posts %}
     <article>
         <h2 class="entry-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
-        <p>{{ post.tagline }}</p>
-        <span class="categories"><a href="{{ post.categfories }}">{{ post.categories }}</a></span>
+			<span>{{ post.date | date: ' %b %d, %Y' }}</span>
     </article>
     {% endfor %}
 </div>
