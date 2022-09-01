@@ -24,6 +24,11 @@ header {
   padding: 10px;
   max-width: 650px;
 }
+footer{
+    font-size: 0.8em;
+    border-top: 1px solid;
+    color: #111;
+}
 span.categories {
   padding: 4px;
   background-color: darkblue;
@@ -80,5 +85,4 @@ p code {
 .entry-title a:hover {
   color: #202020;
   background-color: #fff;
-  text-shadow: -1px -1px 1px #ccc, 2px 2px 1px #363636;
 }
