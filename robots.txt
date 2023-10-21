@@ -1,2 +1,4 @@
-# https://lordvalor.com/
+# https://vlozada.com/
 User-agent: *
+#sitempaps
+Sitemap: https://vlozada.com/sitemap.xml
