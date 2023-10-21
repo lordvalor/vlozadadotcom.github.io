@@ -1,4 +1,4 @@
 # https://vlozada.com/
 User-agent: *
 #sitempaps
-https://vlozada.com/sitemap.xml
+Sitemap: https://vlozada.com/sitemap.xml
