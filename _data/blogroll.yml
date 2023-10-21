@@ -1,0 +1,13 @@
+bloglist:
+  - BlogName: jartigag 
+    link: "https://jartigag.blog/"
+    rss: "https://jartigag.blog/feed"
+
+  - BlogName: Ekaitz's tech blog
+    link: "https://ekaitz.elenq.tech/"
+    rss: "https://ekaitz.elenq.tech/feeds/all.atom.xml"
+
+  - BlogName: kevquirk
+    link: "https://kevquirk.com/"
+    rss: "https://kevquirk.com/feed"
+  

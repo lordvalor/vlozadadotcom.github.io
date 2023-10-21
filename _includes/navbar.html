@@ -1,7 +1,8 @@
 <div class="header">
-  <nav>
-    <li><a href="/">Home</a></li>
-    <li><a href="/contacto">Contacto</a></li>
-    <li><a href="/about">About</a></li>
-  </nav>
+<nav>
+  {% for contact  in site.data.menu.mainMenu %}
+    <li><a href="{{ contact.link}}" title="{{ contact.title}}">{{ contact.title}}</a>
+    </li>
+{% endfor %}
+</nav>
 </div>
