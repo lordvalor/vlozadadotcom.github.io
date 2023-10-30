@@ -1,4 +1,8 @@
 bloglist:
+  - BlogName: Michael Harley
+    link: "https://michaelharley.net/posts/"
+    rss: "https://michaelharley.net/feed/feed.xml"
+
   - BlogName: jartigag 
     link: "https://jartigag.blog/"
     rss: "https://jartigag.blog/feed"
