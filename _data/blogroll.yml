@@ -10,4 +10,7 @@ bloglist:
   - BlogName: kevquirk
     link: "https://kevquirk.com/"
     rss: "https://kevquirk.com/feed"
-  
+
+   - BlogName: Control Alt Delete Blog
+    link: "https://controlaltdelete.technology/"
+    rss: "https://controlaltdelete.technology/rss/feed.rss"
