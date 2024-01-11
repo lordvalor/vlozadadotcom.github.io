@@ -7,13 +7,13 @@ title: Home
         <h1 class="site-title">Hola, Soy Valdemar!</h1>
         <p>{{ site.description }}</p>
     </div>
-{%- include navbar.html -%}
+    {%- include navbar.html -%}
 </header>
 <div class="main container">
     {% for post in site.posts %}
     <article>
         <h2 class="entry-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
-			<span>{{ post.date | date: ' %b %d, %Y' }}</span>
+        <span class="entry-date">{{ post.date | date: '%b %d, %Y' }}</span>
     </article>
     {% endfor %}
 </div>

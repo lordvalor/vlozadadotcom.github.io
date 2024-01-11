@@ -15,6 +15,10 @@ bloglist:
     link: "https://kevquirk.com/"
     rss: "https://kevquirk.com/feed"
 
-   - BlogName: Control Alt Delete Blog
+  - BlogName: Control Alt Delete Blog
     link: "https://controlaltdelete.technology/"
     rss: "https://controlaltdelete.technology/rss/feed.rss"
+
+  - BlogName: Ed Leeman
+    link: "https://edleeman.co.uk/"
+    rss: "https://edleeman.co.uk/index.xml"
