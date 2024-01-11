@@ -24,10 +24,17 @@ header {
   padding: 10px;
   max-width: 650px;
 }
-footer{
-    font-size: 0.8em;
-    border-top: 1px solid;
-    color: #111;
+footer {
+  font-size: 0.8em;
+  border-top: 1px solid;
+  color: #111;
+}
+article > .entry-date {
+  border-radius: 5px;
+  background-color: #000000;
+  color: #fff;
+  padding: 3px;
+  font-size: 7px;
 }
 span.categories {
   padding: 4px;
@@ -44,14 +51,22 @@ span.categories {
   padding: 25px 10px;
   margin-bottom: 0.5rem;
 }
-a {
+li > a {
   text-decoration: none;
-  color: inherit;
 }
-a:hover {
+a:link {
   text-decoration: underline;
   cursor: pointer;
-  color: darkblue;
+  color: #000000;
+}
+p > a:acttive {
+  text-decoration: underline;
+  cursor: pointer;
+}
+p > a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+  color: #000;
 }
 p {
   margin: 0.8em 0 0.8em 0;
