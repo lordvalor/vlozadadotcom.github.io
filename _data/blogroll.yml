@@ -22,3 +22,7 @@ bloglist:
   - BlogName: Ed Leeman
     link: "https://edleeman.co.uk/"
     rss: "https://edleeman.co.uk/index.xml"
+
+  - BlogName: Taylor.town
+    link: "https://taylor.town/feed.xml"
+    rss: "https://taylor.town/feed.xml"
