@@ -24,5 +24,13 @@ bloglist:
     rss: "https://edleeman.co.uk/index.xml"
 
   - BlogName: Taylor.town
-    link: "https://taylor.town/feed.xml"
+    link: "https://taylor.town/"
     rss: "https://taylor.town/feed.xml"
+
+  - BlogName: Blog de Clonbg
+    link: "https://myblog.clonbg.es/"
+    rss: "#"
+
+  - BlogName: Fanatic Naturals
+    link: "https://fanaticnaturals.com/"
+    rss: "https://fanaticnaturals.com/"
