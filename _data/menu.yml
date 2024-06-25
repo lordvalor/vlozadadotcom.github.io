@@ -3,13 +3,13 @@ mainMenu:
   link: "/"
 
 - title: About
-  link: "/about"
+  link: "/about.html"
 
 - title: Contacto
-  link : "/contacto"
+  link : "/contacto.html"
 
 - title: BlogRoll
-  link: "/blogroll"
+  link: "/blogroll.html"
 
 
 contactLink: 
