@@ -6,7 +6,7 @@ baseurl: ""
 url: https://vlozada.com
 
 social: 
-  - github_username: vlozadadotcom
+  - github_username: lordvalor
 
 paginate: 5
 paginate_path: "/page:num/"
